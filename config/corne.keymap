@@ -87,16 +87,16 @@
                         >;
                 };
 
-   //              sym_layer {
-   //                      display-name = "SYM";
-   //                      bindings = <
-   // &none &kp LBRT  &kp AMPERSAND   &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RBRT          &none &none      &none     &none    &none    &none
-   // &none &kp DQT   &kp DOLLAR      &kp PERCENT          &kp CARET             &kp PLUS          &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
-   // &none &kp TILDE &kp EXCLAMATION &kp AT               &kp HASH              &kp PIPE          &none &none      &none     &kp RALT &none    &none
-   //                                 &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE    &none &none      &none
-   //                      >;
-   //              };
-   //
+                sym_layer {
+                        display-name = "SYM";
+                        bindings = <
+   &none &kp LBRC  &kp AMPERSAND   &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RBRC          &none &none      &none     &none    &none    &none
+   &none &kp DQT   &kp DOLLAR      &kp PERCENT          &kp CARET             &kp PLUS          &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
+   &none &kp TILDE &kp EXCLAMATION &kp AT               &kp HASH              &kp PIPE          &none &none      &none     &kp RALT &none    &none
+                                   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE    &none &none      &none
+                        >;
+                };
+
    //              fun_layer {
    //                      display-name = "FUN";
    //                      bindings = <
