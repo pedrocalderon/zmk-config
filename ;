@@ -66,16 +66,16 @@
                         >;
                         
                 };
-
-                mouse_layer {
-                        display-name = "MOUSE";
-                        bindings = <
-   &none &none    &none    &none     &none      &none    &none &none &none &none &none &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &none &none &none &none &none &none
-   &none &none    &kp RALT &none     &none      &none    &none &none &none &none &none &none
-                           &none     &none      &none    &none &none &none
-                        >;
-                };
+   //
+   //              mouse_layer {
+   //                      display-name = "MOUSE";
+   //                      bindings = <
+   // &none &none    &none    &none     &none      &none    &none &none &none &none &none &none
+   // &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &none &none &none &none &none &none
+   // &none &none    &kp RALT &none     &none      &none    &none &none &none &none &none &none
+   //                         &none     &none      &none    &none &none &none
+   //                      >;
+   //              };
    //
    //              num_layer {
    //                      display-name = "NUM";
