@@ -22,7 +22,7 @@
                 compatible = "zmk,combos";
                 combo_capslock {
                          timeout-ms = <50>;
-                         layers = <0>
+                         layers = <0>;
                          key-positions = <15 18>;
                          bindings = <&tog CAPSLAYER>;
                 };
