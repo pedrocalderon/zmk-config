@@ -76,17 +76,17 @@
                            &none     &none      &none    &none &none &none
                         >;
                 };
-   //
-   //              num_layer {
-   //                      display-name = "NUM";
-   //                      bindings = <
-   // &none &kp LBKT  &kp N7 &kp N8     &kp N9 &kp RBKT     &none &none      &none     &none    &none    &none
-   // &none &kp SQT   &kp N4 &kp N5     &kp N6 &kp EQUAL    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
-   // &none &kp GRAVE &kp N1 &kp N2     &kp N3 &kp BSLASH   &none &none      &none     &kp RALT &none    &none
-   //                        &kp PERIOD &kp N0 &kp MINUS    &none &none      &none
-   //                      >;
-   //              };
-   //
+
+                num_layer {
+                        display-name = "NUM";
+                        bindings = <
+   &none &kp LBKT  &kp N7 &kp N8     &kp N9 &kp RBKT     &none &none      &none     &none    &none    &none
+   &none &kp SQT   &kp N4 &kp N5     &kp N6 &kp EQUAL    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
+   &none &kp GRAVE &kp N1 &kp N2     &kp N3 &kp BSLASH   &none &none      &none     &kp RALT &none    &none
+                          &kp PERIOD &kp N0 &kp MINUS    &none &none      &none
+                        >;
+                };
+
    //              sym_layer {
    //                      display-name = "SYM";
    //                      bindings = <
@@ -96,35 +96,35 @@
    //                                 &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE    &none &none      &none
    //                      >;
    //              };
-
-                fun_layer {
-                        display-name = "FUN";
-                        bindings = <
-   &none &kp F12 &kp F7 &kp F8 &kp F9 &none    &none &none      &none     &none    &none    &none
-   &none &kp F11 &kp F4 &kp F5 &kp F6 &none    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
-   &none &kp F10 &kp F1 &kp F2 &kp F3 &none    &none &none      &none     &kp RALT &none    &none
-                        &none  &none  &none    &none &none      &none
-                        >;
-                };
-
-                caps_layer {
-                        display-name = "CAPS";
-                        bindings = <
-   &none &kp LS(Q) &kp LS(W) &kp LS(E) &kp LS(R) &kp LS(T)     &kp LS(Y) &kp LS(U) &kp LS(I) &kp LS(O) &kp LS(P) &none
-   &none &kp LS(A) &kp LS(S) &mt LS(D) &mt LS(F) &kp LS(G)     &kp LS(H) &kp LS(J) &kp LS(K) &kp LS(L) &kp SEMI  &none
-   &none &kp LS(Z) &kp LS(X) &kp LS(C) &kp LS(V) &kp LS(B)     &kp LS(N) &kp LS(M) &kp COMMA &kp DOT   &kp FSLH  &none
-                             &kp ESC   &kp TAB   &kp BSPC      &kp RET   &kp SPACE &kp DEL
-                        >;
-                };
-
-                empty_layer_template {
-                        display-name = "EMPTY";
-                        bindings = <
-   &none &none    &none    &none     &none      &none    &none &none      &none     &none    &none    &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
-   &none &none    &kp RALT &none     &none      &none    &none &none      &none     &kp RALT &none    &none
-                           &none     &none      &none    &none &none      &none
-                        >;
-                };
+   //
+   //              fun_layer {
+   //                      display-name = "FUN";
+   //                      bindings = <
+   // &none &kp F12 &kp F7 &kp F8 &kp F9 &none    &none &none      &none     &none    &none    &none
+   // &none &kp F11 &kp F4 &kp F5 &kp F6 &none    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
+   // &none &kp F10 &kp F1 &kp F2 &kp F3 &none    &none &none      &none     &kp RALT &none    &none
+   //                      &none  &none  &none    &none &none      &none
+   //                      >;
+   //              };
+   //
+   //              caps_layer {
+   //                      display-name = "CAPS";
+   //                      bindings = <
+   // &none &kp LS(Q) &kp LS(W) &kp LS(E) &kp LS(R) &kp LS(T)     &kp LS(Y) &kp LS(U) &kp LS(I) &kp LS(O) &kp LS(P) &none
+   // &none &kp LS(A) &kp LS(S) &mt LS(D) &mt LS(F) &kp LS(G)     &kp LS(H) &kp LS(J) &kp LS(K) &kp LS(L) &kp SEMI  &none
+   // &none &kp LS(Z) &kp LS(X) &kp LS(C) &kp LS(V) &kp LS(B)     &kp LS(N) &kp LS(M) &kp COMMA &kp DOT   &kp FSLH  &none
+   //                           &kp ESC   &kp TAB   &kp BSPC      &kp RET   &kp SPACE &kp DEL
+   //                      >;
+   //              };
+   //
+   //              empty_layer_template {
+   //                      display-name = "EMPTY";
+   //                      bindings = <
+   // &none &none    &none    &none     &none      &none    &none &none      &none     &none    &none    &none
+   // &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
+   // &none &none    &kp RALT &none     &none      &none    &none &none      &none     &kp RALT &none    &none
+   //                         &none     &none      &none    &none &none      &none
+   //                      >;
+   //              };
         };
 };
