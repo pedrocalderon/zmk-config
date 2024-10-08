@@ -18,6 +18,8 @@
 #define CAPSLAYER    7
 
 / {
+        chosen { zmk,matrix_transform = &five_column_transform; };
+
         combos {
                 compatible = "zmk,combos";
                 combo_capslock {
@@ -39,29 +41,29 @@
 // |  Z  |  X  |  C  |  V  |  B   |         |  N  |  M     |  ,  |  .  |  /  | 
 //             | ESC | TAB | BSPC |        | ENT | SPACE  | DEL |
                         bindings = <
-   &none &kp Q      &kp W       &kp E           &kp R          &kp T              &kp Y       &kp U         &kp I        &kp O        &kp P           &none
-   &none &mt LGUI A &mt LALT S  &mt LCTRL D     &mt LSHIFT F   &kp G              &kp H       &mt LSHIFT J  &mt LCTRL K  &mt LALT L   &mt LGUI SEMI   &none
-   &none &kp Z      &mt RALT X  &kp C           &kp V          &kp B              &kp N       &kp M         &kp COMMA    &mt RALT DOT &kp FSLH        &none
-                                &lt MEDIA ESC   &lt NAV TAB    &lt MOUSE BSPC     &lt SYM RET &lt NUM SPACE &lt FUN DEL
+   &kp Q      &kp W       &kp E           &kp R          &kp T              &kp Y       &kp U         &kp I        &kp O        &kp P         
+   &mt LGUI A &mt LALT S  &mt LCTRL D     &mt LSHIFT F   &kp G              &kp H       &mt LSHIFT J  &mt LCTRL K  &mt LALT L   &mt LGUI SEMI  
+   &kp Z      &mt RALT X  &kp C           &kp V          &kp B              &kp N       &kp M         &kp COMMA    &mt RALT DOT &kp FSLH       
+                          &lt MEDIA ESC   &lt NAV TAB    &lt MOUSE BSPC     &lt SYM RET &lt NUM SPACE &lt FUN DEL
                         >;
                 };
 
                 nav_layer {
                         display-name = "NAV";
                         bindings =  <
-   &none &none    &none    &none     &none      &none    &none    &none     &none     &none     &none &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
-   &none &none    &kp RALT &none     &none      &none    &kp HOME &kp PG_UP &kp PG_DN &kp END   &none &none
-                           &none     &none      &none    &kp RET  &kp SPACE &kp DEL
+   &none    &none    &none     &none      &none    &none    &none     &none     &none     &none
+   &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+   &none    &kp RALT &none     &none      &none    &kp HOME &kp PG_UP &kp PG_DN &kp END   &none
+                     &none     &none      &none    &kp RET  &kp SPACE &kp DEL
                         >;
                 };
 
                 media_layer {
                         display-name = "MEDIA";
                         bindings =  <
-   &none &none    &none    &none     &none      &none    &none      &none        &none        &none      &none &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none &none
-   &none &none    &kp RALT &none     &none      &none    &none      &kp C_BRI_DN &kp C_BRI_UP &none      &none &none
+   &none    &none    &none     &none      &none    &none      &none        &none        &none      &none
+   &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
+   &none    &kp RALT &none     &none      &none    &none      &kp C_BRI_DN &kp C_BRI_UP &none      &none
                            &none     &none      &none    &kp C_STOP &kp C_PLAY   &kp C_MUTE
                         >;
                         
@@ -70,9 +72,9 @@
                 mouse_layer {
                         display-name = "MOUSE";
                         bindings = <
-   &none &none    &none    &none     &none      &none    &none &none &none &none &none &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &none &none &none &none &none &none
-   &none &none    &kp RALT &none     &none      &none    &none &none &none &none &none &none
+   &none    &none    &none     &none      &none    &none &none &none &none &none
+   &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &none &none &none &none &none
+   &none    &kp RALT &none     &none      &none    &none &none &none &none &none
                            &none     &none      &none    &none &none &none
                         >;
                 };
@@ -80,9 +82,9 @@
                 num_layer {
                         display-name = "NUM";
                         bindings = <
-   &none &kp LBKT  &kp N7 &kp N8     &kp N9 &kp RBKT     &none &none      &none     &none    &none    &none
-   &none &kp SQT   &kp N4 &kp N5     &kp N6 &kp EQUAL    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
-   &none &kp GRAVE &kp N1 &kp N2     &kp N3 &kp BSLH     &none &none      &none     &kp RALT &none    &none
+   &kp LBKT  &kp N7 &kp N8     &kp N9 &kp RBKT     &none &none      &none     &none    &none   
+   &kp SQT   &kp N4 &kp N5     &kp N6 &kp EQUAL    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI
+   &kp GRAVE &kp N1 &kp N2     &kp N3 &kp BSLH     &none &none      &none     &kp RALT &none   
                           &kp PERIOD &kp N0 &kp MINUS    &none &none      &none
                         >;
                 };
@@ -90,30 +92,30 @@
                 sym_layer {
                         display-name = "SYM";
                         bindings = <
-   &none &kp LBRC  &kp AMPERSAND   &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RBRC          &none &none      &none     &none    &none    &none
-   &none &kp DQT   &kp DOLLAR      &kp PERCENT          &kp CARET             &kp PLUS          &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
-   &none &kp TILDE &kp EXCLAMATION &kp AT               &kp HASH              &kp PIPE          &none &none      &none     &kp RALT &none    &none
-                                   &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE    &none &none      &none
+   &kp LBRC  &kp AMPERSAND   &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RBRC          &none &none      &none     &none    &none   
+   &kp DQT   &kp DOLLAR      &kp PERCENT          &kp CARET             &kp PLUS          &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI
+   &kp TILDE &kp EXCLAMATION &kp AT               &kp HASH              &kp PIPE          &none &none      &none     &kp RALT &none   
+                             &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE    &none &none      &none
                         >;
                 };
 
                 fun_layer {
                         display-name = "FUN";
                         bindings = <
-   &none &kp F12 &kp F7 &kp F8 &kp F9 &none    &none &none      &none     &none    &none    &none
-   &none &kp F11 &kp F4 &kp F5 &kp F6 &none    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
-   &none &kp F10 &kp F1 &kp F2 &kp F3 &none    &none &none      &none     &kp RALT &none    &none
-                        &none  &none  &none    &none &none      &none
+   &kp F12 &kp F7 &kp F8 &kp F9 &none    &none &none      &none     &none    &none   
+   &kp F11 &kp F4 &kp F5 &kp F6 &none    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI
+   &kp F10 &kp F1 &kp F2 &kp F3 &none    &none &none      &none     &kp RALT &none   
+                  &none  &none  &none    &none &none      &none
                         >;
                 };
 
                 caps_layer {
                         display-name = "CAPS";
                         bindings = <
-   &none &kp LS(Q) &kp LS(W) &kp LS(E) &kp LS(R) &kp LS(T)     &kp LS(Y) &kp LS(U) &kp LS(I) &kp LS(O) &kp LS(P) &none
-   &none &kp LS(A) &kp LS(S) &kp LS(D) &kp LS(F) &kp LS(G)     &kp LS(H) &kp LS(J) &kp LS(K) &kp LS(L) &kp SEMI  &none
-   &none &kp LS(Z) &kp LS(X) &kp LS(C) &kp LS(V) &kp LS(B)     &kp LS(N) &kp LS(M) &kp COMMA &kp DOT   &kp FSLH  &none
-                             &kp ESC   &kp TAB   &kp BSPC      &kp RET   &kp SPACE &kp DEL
+   &kp LS(Q) &kp LS(W) &kp LS(E) &kp LS(R) &kp LS(T)     &kp LS(Y) &kp LS(U) &kp LS(I) &kp LS(O) &kp LS(P)
+   &kp LS(A) &kp LS(S) &kp LS(D) &kp LS(F) &kp LS(G)     &kp LS(H) &kp LS(J) &kp LS(K) &kp LS(L) &kp SEMI 
+   &kp LS(Z) &kp LS(X) &kp LS(C) &kp LS(V) &kp LS(B)     &kp LS(N) &kp LS(M) &kp COMMA &kp DOT   &kp FSLH 
+                       &kp ESC   &kp TAB   &kp BSPC      &kp RET   &kp SPACE &kp DEL
                         >;
                 };
    //
