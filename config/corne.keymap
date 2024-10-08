@@ -44,7 +44,6 @@
                 compatible = "zmk,combos";
                 combo_capslock {
                          timeout-ms = <50>;
-                         layers = <0>;
                          key-positions = <13 16>;
                          bindings = <&tog CAPSLAYER>;
                 };
