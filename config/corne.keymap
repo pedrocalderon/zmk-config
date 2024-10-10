@@ -30,7 +30,7 @@
             lhm: left_homerow_mods {
                   compatible = "zmk,behavior-hold-tap";
                   #binding-cells = <2>;
-                  tapping-term-ms = <150>;
+                  tapping-term-ms = <200>;
                   quick-tap-ms = <200>;
                   flavor = "tap-preferred";
                   require-prior-idle-ms = <125>;
@@ -40,7 +40,7 @@
             rhm: right_homerow_mods {
                   compatible = "zmk,behavior-hold-tap";
                   #binding-cells = <2>;
-                  tapping-term-ms = <150>;
+                  tapping-term-ms = <200>;
                   quick-tap-ms = <200>;
                   flavor = "tap-preferred";
                   require-prior-idle-ms = <125>;
@@ -55,7 +55,8 @@
                   #binding-cells = <0>;
                   bindings
                       = <&macro_press &kp RALT>
-                      , <&macro_tap &kp GRAVE &kp A> , <&macro_release &kp RALT>
+                      , <&macro_tap &kp GRAVE &kp A>
+                      , <&macro_release &kp RALT>
                       ;
             };
         };
