@@ -21,21 +21,17 @@
         chosen { zmk,matrix_transform = &five_column_transform; };
 
         behaviors {
+            hm: homerow_mods {
+                  compatible = "zmk,behavior-hold-tap";
+                  #binding-cells = <2>;
+                  tapping-term-ms = <150>;
+                  quick-tap-ms = <0>;
+                  flavor = "tap-preferred";
+                  bindings = <&kp>, <&kp>;
+            };
         };
 
         macros {
-           accent_a_macro: accent_a_macro {
-                compatible = "zmk,behavior-macro";
-                label = "new_macro";
-                #binding-cells = <0>;
-                bindings =
-                    <&macro_press>,
-                    <&kp RALT &kp RSHFT>,
-                    <&macro_tap>,
-                    <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N5>,
-                    <&macro_release>,
-                    <&kp RSHFT &kp RALT>;
-            };
         };
 
         combos {
@@ -59,8 +55,8 @@
 //             | ESC | TAB | BSPC |        | ENT | SPACE  | DEL |
                         bindings = <
    &kp Q      &kp W       &kp E           &kp R          &kp T              &kp Y       &kp U         &kp I        &kp O        &kp P         
-   &mt LGUI A &mt LALT S  &mt LCTRL D     &mt LSHIFT F   &kp G              &kp H       &mt LSHIFT J  &mt LCTRL K  &mt LALT L   &mt LGUI SEMI  
-   &kp Z      &mt RALT X  &kp C           &kp V          &kp B              &kp N       &kp M         &kp COMMA    &mt RALT DOT &kp FSLH       
+   &hm LGUI A &hm LALT S  &hm LCTRL D     &hm LSHIFT F   &kp G              &kp H       &hm LSHIFT J  &hm LCTRL K  &hm LALT L   &hm LGUI SEMI  
+   &kp Z      &hm RALT X  &kp C           &kp V          &kp B              &kp N       &kp M         &kp COMMA    &hm RALT DOT &kp FSLH       
                           &lt MEDIA ESC   &lt NAV TAB    &lt MOUSE BSPC     &lt SYM RET &lt NUM SPACE &lt FUN DEL
                         >;
                 };
@@ -68,7 +64,7 @@
                 nav_layer {
                         display-name = "NAV";
                         bindings =  <
-   &none    &none    &none     &none      &none    &accent_a_macro    &none     &none     &none     &none
+   &none    &none    &none     &none      &none    &kp RA(A)    &none     &none     &none     &none
    &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
    &none    &kp RALT &none     &none      &none    &kp HOME &kp PG_UP &kp PG_DN &kp END   &none
                      &none     &none      &none    &kp RET  &kp SPACE &kp DEL
