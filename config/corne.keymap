@@ -140,7 +140,7 @@
                 combo_circ {
                          timeout-ms = <50>;
                          key-positions = <6 8>;
-                         bindings = <&sl TILDEL>;
+                         bindings = <&sl CIRCL>;
                 };
         };    
 
