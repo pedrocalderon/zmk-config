@@ -17,7 +17,9 @@
 #define FUN          6
 #define ACUTEL       7
 #define GRAVEL       8
-#define CAPSLAYER    9
+#define CIRCL        9
+#define TILDEL       10
+#define CAPSLAYER    11
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -50,13 +52,62 @@
         };
 
         macros {
-            a_grave: a_grave {
+            agrave: agrave {
                   compatible = "zmk,behavior-macro";
                   #binding-cells = <0>;
                   bindings
                       = <&macro_press &kp RALT>
                       , <&macro_tap &kp GRAVE &kp A>
                       , <&macro_release &kp RALT>
+                      ;
+            };
+            circ: circ {
+                  compatible = "zmk,behavior-macro-one-param";
+                  #binding-cells = <1>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_param_1to1>
+                      , <&macro_tap &kp CARET &kp MACRO_PLACEHOLDER>
+                      , <&macro_release &kp RALT>
+                      ;
+            };
+            atilde: atilde {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <1>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE &kp A>
+                      , <&macro_release &kp RALT>
+                      ;
+            };
+            ao: ao {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <1>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE &kp A>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp O>
+                      ;
+            };
+            aes: aes {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <1>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE &kp A>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp E &kp S>
+                      ;
+            };
+            oes: oes {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <1>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE &kp O>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp E &kp S>
                       ;
             };
         };
@@ -77,6 +128,16 @@
                          timeout-ms = <50>;
                          key-positions = <6 7>;
                          bindings = <&sl GRAVEL>;
+                };
+                combo_tilde {
+                         timeout-ms = <50>;
+                         key-positions = <6 7 8>;
+                         bindings = <&sl TILDEL>;
+                };
+                combo_circ {
+                         timeout-ms = <50>;
+                         key-positions = <6 8>;
+                         bindings = <&sl TILDEL>;
                 };
         };    
 
@@ -173,9 +234,29 @@
                         display-name = "GRAVE";
                         bindings = <
    &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   
-   &a_grave  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   
+   &agrave   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   
    &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   
                      &trans  &trans  &trans    &trans  &trans  &trans
+                        >;
+                };
+
+                circ_layer {
+                        display-name = "GRAVE";
+                        bindings = <
+   &trans   &trans  &circ E  &trans  &trans    &trans &circ U  &circ I  &circ O  &trans   
+   &circ A  &trans  &trans   &trans  &trans    &trans &trans   &trans   &trans   &trans   
+   &trans   &trans  &trans   &trans  &trans    &trans &trans   &trans   &trans   &trans   
+                    &trans   &trans  &trans    &trans &trans   &trans
+                        >;
+                };
+
+                tilde_layer {
+                        display-name = "GRAVE";
+                        bindings = <
+   &trans   &trans  &trans  &trans  &trans    &trans &trans  &trans  &oes    &trans   
+   &atilde  &ao     &aes    &trans  &trans    &trans &trans  &trans  &trans  &trans   
+   &trans   &trans  &trans  &trans  &trans    &trans &trans  &trans  &trans  &trans   
+                    &trans  &trans  &trans    &trans &trans  &trans
                         >;
                 };
 
