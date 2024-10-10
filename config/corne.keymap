@@ -57,8 +57,9 @@
                   #binding-cells = <0>;
                   bindings
                       = <&macro_press &kp RALT>
-                      , <&macro_tap &kp GRAVE &kp A>
+                      , <&macro_tap &kp GRAVE>
                       , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A>
                       ;
             };
             circ: circ {
@@ -66,48 +67,50 @@
                   #binding-cells = <1>;
                   bindings
                       = <&macro_press &kp RALT>
-                      , <&macro_param_1to1>
-                      , <&macro_tap &kp CARET &kp MACRO_PLACEHOLDER>
+                      , <&macro_tap &kp CARET>
                       , <&macro_release &kp RALT>
+                      , <&macro_param_1to1>
+                      , <&macro_tap &kp MACRO_PLACEHOLDER>
                       ;
             };
             atilde: atilde {
                   compatible = "zmk,behavior-macro";
-                  #binding-cells = <1>;
+                  #binding-cells = <0>;
                   bindings
                       = <&macro_press &kp RALT>
-                      , <&macro_tap &kp TILDE &kp A>
+                      , <&macro_tap &kp TILDE>
                       , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A>
                       ;
             };
             ao: ao {
                   compatible = "zmk,behavior-macro";
-                  #binding-cells = <1>;
+                  #binding-cells = <0>;
                   bindings
                       = <&macro_press &kp RALT>
-                      , <&macro_tap &kp TILDE &kp A>
+                      , <&macro_tap &kp TILDE>
                       , <&macro_release &kp RALT>
-                      , <&macro_tap &kp O>
+                      , <&macro_tap &kp A &kp O>
                       ;
             };
             aes: aes {
                   compatible = "zmk,behavior-macro";
-                  #binding-cells = <1>;
+                  #binding-cells = <0>;
                   bindings
                       = <&macro_press &kp RALT>
-                      , <&macro_tap &kp TILDE &kp A>
+                      , <&macro_tap &kp TILDE>
                       , <&macro_release &kp RALT>
-                      , <&macro_tap &kp E &kp S>
+                      , <&macro_tap &kp A &kp E &kp S>
                       ;
             };
             oes: oes {
                   compatible = "zmk,behavior-macro";
-                  #binding-cells = <1>;
+                  #binding-cells = <0>;
                   bindings
                       = <&macro_press &kp RALT>
-                      , <&macro_tap &kp TILDE &kp O>
+                      , <&macro_tap &kp TILDE>
                       , <&macro_release &kp RALT>
-                      , <&macro_tap &kp E &kp S>
+                      , <&macro_tap &kp O &kp E &kp S>
                       ;
             };
         };
