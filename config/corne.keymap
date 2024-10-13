@@ -113,6 +113,30 @@
                       , <&macro_tap &kp O &kp E &kp S>
                       ;
             };
+            nao_lower: nao_lower {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_tap &kp N>
+                      , <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A &kp O>
+                      ;
+            };
+            nao_upper: nao_upper {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_press &kp LSHIFT>
+                      , <&macro_tap &kp N>
+                      , <&macro_release &kp LSHIFT>
+                      , <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A &kp O>
+                      ;
+            };
         };
 
         combos {
@@ -258,7 +282,7 @@
                         bindings = <
    &trans   &trans  &trans  &trans  &trans    &trans &trans  &trans  &oes    &trans   
    &atilde  &ao     &aes    &trans  &trans    &trans &trans  &trans  &trans  &trans   
-   &trans   &trans  &trans  &trans  &trans    &trans &trans  &trans  &trans  &trans   
+   &trans   &trans  &trans  &trans  &trans    &nao_lower &trans  &trans  &trans  &trans   
                     &trans  &trans  &trans    &trans &trans  &trans
                         >;
                 };
