@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+/* Layers */
 #define QWERTY       0
 #define NAV          1
 #define MEDIA        2
@@ -20,6 +21,9 @@
 #define CIRCL        9
 #define TILDEL       10
 #define CAPSLAYER    11
+
+/* Shortcuts */
+#define SLALL LC(A)
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -48,6 +52,12 @@
                   require-prior-idle-ms = <125>;
                   bindings = <&kp>, <&kp>;
                   hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            };
+            nao: nao {
+                  compatible = "zmk,behavior-mod-morph";
+                  #binding-cells = <0>;
+                  bindings = <&nao_lower>, <&nao_upper>;
+                  mods= <(MOD_LSFT|MOD_RSFT)>
             };
         };
 
@@ -141,6 +151,13 @@
 
         combos {
                 compatible = "zmk,combos";
+        /*                KEY POSITIONS
+
+             0   1   2   3   4      5   6   7   8   9
+            10  11  12  13  14     15  16  17  18  19
+            20  21  22  23  24     25  26  27  28  29
+                    30  31  32     33  34  35          */
+
                 combo_capslock {
                          timeout-ms = <50>;
                          key-positions = <13 16>;
@@ -166,6 +183,19 @@
                          key-positions = <6 8>;
                          bindings = <&sl CIRCL>;
                 };
+
+		/* Brackets */
+		lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <QWWERTY NUM SYM>; };
+		rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <QWWERTY NUM SYM>; };
+		lpar { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <QWWERTY NUM SYM>; };
+		rpar { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <QWWERTY NUM SYM>; };
+		lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; layers = <QWWERTY NUM SYM>; };
+		rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <QWWERTY NUM SYM>; };
+
+		/* Convenience */
+		del { key-positions = <4 14>; bindings = <&kp DEL>; };
+		esc { key-positions = <5 15>; bindings = <&kp ESC>; };
+		slall { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV>; };
         };    
 
         keymap {
@@ -282,7 +312,7 @@
                         bindings = <
    &trans   &trans  &trans  &trans  &trans    &trans &trans  &trans  &oes    &trans   
    &atilde  &ao     &aes    &trans  &trans    &trans &trans  &trans  &trans  &trans   
-   &trans   &trans  &trans  &trans  &trans    &nao_lower &trans  &trans  &trans  &trans   
+   &trans   &trans  &trans  &trans  &trans    &nao   &trans  &trans  &trans  &trans   
                     &trans  &trans  &trans    &trans &trans  &trans
                         >;
                 };
