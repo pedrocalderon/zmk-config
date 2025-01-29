@@ -185,12 +185,12 @@
                 };
 
 		/* Brackets */
-		lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <QWWERTY NUM SYM>; };
-		rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <QWWERTY NUM SYM>; };
-		lpar { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <QWWERTY NUM SYM>; };
-		rpar { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <QWWERTY NUM SYM>; };
-		lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; layers = <QWWERTY NUM SYM>; };
-		rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <QWWERTY NUM SYM>; };
+		lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; };
+		rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; };
+		lpar { key-positions = <2 12>; bindings = <&kp LPAR>; };
+		rpar { key-positions = <7 17>; bindings = <&kp RPAR>; };
+		lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; };
+		rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; };
 
 		/* Convenience */
 		del { key-positions = <4 14>; bindings = <&kp DEL>; };
