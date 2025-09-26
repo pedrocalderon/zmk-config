@@ -69,8 +69,8 @@
           };
 
           /* Brackets */
-          lbkt { key-positions = <0 10>; bindings = <&kp LESS_THAN>; };
-          lbkt { key-positions = <9 10>; bindings = <&kp GREATER_THAN>; };
+          less_than { key-positions = <0 10>; bindings = <&kp LESS_THAN>; };
+          greater_than { key-positions = <9 10>; bindings = <&kp GREATER_THAN>; };
           lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; };
           rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; };
           lpar { key-positions = <2 12>; bindings = <&kp LPAR>; };
