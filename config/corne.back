@@ -1,0 +1,330 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/* Layers */
+#define QWERTY       0
+#define NAV          1
+#define MEDIA        2
+#define MOUSE        3
+#define NUM          4
+#define SYM          5
+#define FUN          6
+#define ACUTEL       7
+#define GRAVEL       8
+#define CIRCL        9
+#define TILDEL       10
+#define CAPSLAYER    11
+
+/* Shortcuts */
+#define SLALL LC(A)
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
+/ {
+        chosen { zmk,matrix_transform = &five_column_transform; };
+
+        behaviors {
+            lhm: left_homerow_mods {
+                  compatible = "zmk,behavior-hold-tap";
+                  #binding-cells = <2>;
+                  tapping-term-ms = <200>;
+                  quick-tap-ms = <200>;
+                  flavor = "tap-preferred";
+                  require-prior-idle-ms = <125>;
+                  bindings = <&kp>, <&kp>;
+                  hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            };
+            rhm: right_homerow_mods {
+                  compatible = "zmk,behavior-hold-tap";
+                  #binding-cells = <2>;
+                  tapping-term-ms = <200>;
+                  quick-tap-ms = <200>;
+                  flavor = "tap-preferred";
+                  require-prior-idle-ms = <125>;
+                  bindings = <&kp>, <&kp>;
+                  hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            };
+            nao: nao {
+                  compatible = "zmk,behavior-mod-morph";
+                  #binding-cells = <0>;
+                  bindings = <&nao_lower>, <&nao_upper>;
+                  mods= <(MOD_LSFT|MOD_RSFT)>;
+            };
+        };
+
+        macros {
+            agrave: agrave {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp GRAVE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A>
+                      ;
+            };
+            circ: circ {
+                  compatible = "zmk,behavior-macro-one-param";
+                  #binding-cells = <1>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp N6>
+                      , <&macro_release &kp RALT>
+                      , <&macro_param_1to1>
+                      , <&macro_tap &kp MACRO_PLACEHOLDER>
+                      ;
+            };
+            atilde: atilde {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A>
+                      ;
+            };
+            ao: ao {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A &kp O>
+                      ;
+            };
+            aes: aes {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A &kp E &kp S>
+                      ;
+            };
+            oes: oes {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp O &kp E &kp S>
+                      ;
+            };
+            nao_lower: nao_lower {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_tap &kp N>
+                      , <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A &kp O>
+                      ;
+            };
+            nao_upper: nao_upper {
+                  compatible = "zmk,behavior-macro";
+                  #binding-cells = <0>;
+                  bindings
+                      = <&macro_press &kp LSHIFT>
+                      , <&macro_tap &kp N>
+                      , <&macro_release &kp LSHIFT>
+                      , <&macro_press &kp RALT>
+                      , <&macro_tap &kp TILDE>
+                      , <&macro_release &kp RALT>
+                      , <&macro_tap &kp A &kp O>
+                      ;
+            };
+        };
+
+        combos {
+                compatible = "zmk,combos";
+        /*                KEY POSITIONS
+
+             0   1   2   3   4      5   6   7   8   9
+            10  11  12  13  14     15  16  17  18  19
+            20  21  22  23  24     25  26  27  28  29
+                    30  31  32     33  34  35          */
+
+                combo_capslock {
+                         timeout-ms = <50>;
+                         key-positions = <13 16>;
+                         bindings = <&caps_word>;
+                };
+                combo_acute {
+                         timeout-ms = <50>;
+                         key-positions = <7 8>;
+                         bindings = <&sl ACUTEL>;
+                };
+                combo_grave {
+                         timeout-ms = <50>;
+                         key-positions = <6 7>;
+                         bindings = <&sl GRAVEL>;
+                };
+                combo_tilde {
+                         timeout-ms = <50>;
+                         key-positions = <6 7 8>;
+                         bindings = <&sl TILDEL>;
+                };
+                combo_circ {
+                         timeout-ms = <50>;
+                         key-positions = <6 8>;
+                         bindings = <&sl CIRCL>;
+                };
+
+		/* Brackets */
+		lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; };
+		rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; };
+		lpar { key-positions = <2 12>; bindings = <&kp LPAR>; };
+		rpar { key-positions = <7 17>; bindings = <&kp RPAR>; };
+		lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; };
+		rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; };
+
+		/* Convenience */
+		del { key-positions = <4 14>; bindings = <&kp DEL>; };
+		esc { key-positions = <5 15>; bindings = <&kp ESC>; };
+		slall { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV>; };
+        };    
+
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+                        display-name = "QWERTY";
+// -----------------------------------------------------------------------------------------
+// |  Q  |  W  |  E  |  R  |  T   |         |  Y  |  U     |  I  |  O  |  P  | 
+// |  A  |  S  |  D  |  F  |  G   |         |  H  |  J     |  K  |  L  |  ;  | 
+// |  Z  |  X  |  C  |  V  |  B   |         |  N  |  M     |  ,  |  .  |  /  | 
+//             | ESC | TAB | BSPC |        | ENT | SPACE  | DEL |
+                        bindings = <
+   &kp Q  &kp W        &kp E           &kp R          &kp T              &kp Y       &kp U          &kp I         &kp O         &kp P         
+   &kp A  &lhm LGUI S  &lhm LALT D     &lhm LCTRL F   &kp G              &kp H       &rhm LSHIFT J  &rhm LCTRL K  &rhm LALT L   &rhm LGUI SEMI  
+   &kp Z  &lhm RALT X  &kp C           &kp V          &kp B              &kp N       &kp M          &kp COMMA     &rhm RALT DOT &kp FSLH       
+                       &lt MEDIA ESC   &kp RSHIFT     &lt MOUSE BSPC     &lt SYM RET &lt NUM SPACE  &lt FUN DEL
+                        >;
+                };
+
+                nav_layer {
+                        display-name = "NAV";
+                        bindings =  <
+   &none    &none    &none     &none      &none    &none    &none     &none     &none     &none
+   &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+   &none    &kp RALT &none     &none      &none    &kp HOME &kp PG_UP &kp PG_DN &kp END   &none
+                     &none     &none      &none    &kp RET  &kp SPACE &kp DEL
+                        >;
+                };
+
+                media_layer {
+                        display-name = "MEDIA";
+                        bindings =  <
+   &none    &none    &none     &none      &none    &none      &none        &none        &none      &none
+   &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
+   &none    &kp RALT &none     &none      &none    &none      &kp C_BRI_DN &kp C_BRI_UP &none      &none
+                           &none     &none      &none    &kp C_STOP &kp C_PLAY   &kp C_MUTE
+                        >;
+                        
+                };
+
+                num_layer {
+                        display-name = "NUM";
+                        bindings = <
+   &kp LBKT  &kp N7 &kp N8     &kp N9 &kp RBKT     &none &none      &none     &none    &none   
+   &kp SQT   &kp N4 &kp N5     &kp N6 &kp EQUAL    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI
+   &kp GRAVE &kp N1 &kp N2     &kp N3 &kp BSLH     &none &none      &none     &kp RALT &none   
+                          &kp PERIOD &kp N0 &kp MINUS    &none &none      &none
+                        >;
+                };
+
+                sym_layer {
+                        display-name = "SYM";
+                        bindings = <
+   &kp LBRC  &kp AMPERSAND   &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RBRC          &none &none      &none     &none    &none   
+   &kp DQT   &kp DOLLAR      &kp PERCENT          &kp CARET             &kp PLUS          &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI
+   &kp TILDE &kp EXCLAMATION &kp AT               &kp HASH              &kp PIPE          &none &none      &none     &kp RALT &none   
+                             &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE    &none &none      &none
+                        >;
+                };
+
+                fun_layer {
+                        display-name = "FUN";
+                        bindings = <
+   &kp F12 &kp F7 &kp F8 &kp F9 &none    &none &none      &none     &none    &none   
+   &kp F11 &kp F4 &kp F5 &kp F6 &none    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI
+   &kp F10 &kp F1 &kp F2 &kp F3 &none    &none &none      &none     &kp RALT &none   
+                  &none  &none  &none    &none &none      &none
+                        >;
+                };
+
+                acute_layer {
+                        display-name = "ACUTE";
+                        bindings = <
+   &trans    &trans    &kp RA(E)      &trans  &trans    &trans &kp RA(U)  &kp RA(I)  &kp RA(O) &trans   
+   &kp RA(A) &trans    &trans         &trans  &trans    &trans &trans     &trans     &trans    &trans   
+   &trans    &trans    &kp RA(COMMA)  &trans  &trans    &trans &trans     &trans     &trans    &trans   
+                       &trans         &trans  &trans    &trans &trans     &trans
+                        >;
+                };
+
+                grave_layer {
+                        display-name = "GRAVE";
+                        bindings = <
+   &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   
+   &agrave   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   
+   &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   
+                     &trans  &trans  &trans    &trans  &trans  &trans
+                        >;
+                };
+
+                circ_layer {
+                        display-name = "GRAVE";
+                        bindings = <
+   &trans   &trans  &circ E  &trans  &trans    &trans &circ U  &circ I  &circ O  &trans   
+   &circ A  &trans  &trans   &trans  &trans    &trans &trans   &trans   &trans   &trans   
+   &trans   &trans  &trans   &trans  &trans    &trans &trans   &trans   &trans   &trans   
+                    &trans   &trans  &trans    &trans &trans   &trans
+                        >;
+                };
+
+                tilde_layer {
+                        display-name = "GRAVE";
+                        bindings = <
+   &trans   &trans  &trans  &trans  &trans    &trans &trans  &trans  &oes    &trans   
+   &atilde  &ao     &aes    &trans  &trans    &trans &trans  &trans  &trans  &trans   
+   &trans   &trans  &trans  &trans  &trans    &nao   &trans  &trans  &trans  &trans   
+                    &trans  &trans  &trans    &trans &trans  &trans
+                        >;
+                };
+
+                caps_layer {
+                        display-name = "CAPS";
+                        bindings = <
+   &kp LS(Q) &kp LS(W) &kp LS(E) &kp LS(R) &kp LS(T)     &kp LS(Y) &kp LS(U) &kp LS(I) &kp LS(O) &kp LS(P)
+   &kp LS(A) &kp LS(S) &kp LS(D) &kp LS(F) &kp LS(G)     &kp LS(H) &kp LS(J) &kp LS(K) &kp LS(L) &kp SEMI 
+   &kp LS(Z) &kp LS(X) &kp LS(C) &kp LS(V) &kp LS(B)     &kp LS(N) &kp LS(M) &kp COMMA &kp DOT   &kp FSLH 
+                       &kp ESC   &kp TAB   &kp BSPC      &kp RET   &kp SPACE &kp DEL
+                        >;
+                };
+   //
+   //              empty_layer_template {
+   //                      display-name = "EMPTY";
+   //                      bindings = <
+   // &none &none    &none    &none     &none      &none    &none &none      &none     &none    &none    &none
+   // &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none    &none &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &none
+   // &none &none    &kp RALT &none     &none      &none    &none &none      &none     &kp RALT &none    &none
+   //                         &none     &none      &none    &none &none      &none
+   //                      >;
+   //              };
+        };
+};
