@@ -23,8 +23,8 @@
 #define BR_I    I                         // I
 #define BR_O    O                         // O
 #define BR_P    P                         // P
-#define BR_ACUT LEFT_BRACE                // ´ (dead)
-#define BR_LBRC RIGHT_BRACE               // [
+#define BR_ACUT LEFT_BRACKET              // ´ (dead)
+#define BR_LBRC RIGHT_BRACKET             // [
 #define BR_A    A                         // A
 #define BR_S    S                         // S
 #define BR_D    D                         // D
