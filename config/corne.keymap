@@ -61,7 +61,7 @@
           combo_grave {
                     timeout-ms = <50>;
                     key-positions = <6 7>;
-                    bindings = <&kp LEFT_SHIFT(BR_ACUT)>;
+                    bindings = <&kp RS(BR_ACUT)>;
           };
           combo_tilde {
                     timeout-ms = <50>;
@@ -71,7 +71,7 @@
           combo_circ {
                     timeout-ms = <50>;
                     key-positions = <6 8>;
-                    bindings = <&kp LEFT_SHIFT(BR_TILD)>;
+                    bindings = <&kp RS(BR_TILD)>;
           };
 
           /* Brackets */
