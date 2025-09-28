@@ -49,28 +49,28 @@
 #define BR_DOT  PERIOD                    // .
 #define BR_SEMICOLON SLASH                // ;
 #define BR_SLSH INT1                      // /
-#define BR_DQUO RIGHT_SHIFT(BR_QUOT)       // "
-#define BR_EXLM RIGHT_SHIFT(BR_1)          // !
-#define BR_AT   RIGHT_SHIFT(BR_2)          // @
-#define BR_HASH RIGHT_SHIFT(BR_3)          // #
-#define BR_DLR  RIGHT_SHIFT(BR_4)          // $
-#define BR_PERC RIGHT_SHIFT(BR_5)          // %
-#define BR_DIAE RIGHT_SHIFT(BR_6)          // ¨ (dead)
-#define BR_AMPR RIGHT_SHIFT(BR_7)          // &
-#define BR_ASTR RIGHT_SHIFT(BR_8)          // *
-#define BR_LPRN RIGHT_SHIFT(BR_9)          // (
-#define BR_RPRN RIGHT_SHIFT(BR_0)          // )
-#define BR_UNDS RIGHT_SHIFT(BR_MINS)       // _
-#define BR_PLUS RIGHT_SHIFT(BR_EQL)        // +
-#define BR_GRV  RIGHT_SHIFT(BR_ACUT)       // ` (dead)
-#define BR_LCBR RIGHT_SHIFT(BR_LBRC)       // {
-#define BR_CIRC RIGHT_SHIFT(BR_TILD)       // ^ (dead)
-#define BR_RCBR RIGHT_SHIFT(BR_RBRC)       // }
-#define BR_PIPE RIGHT_SHIFT(BR_BSLS)       // |
-#define BR_LABK RIGHT_SHIFT(BR_COMM)       // <
-#define BR_RABK RIGHT_SHIFT(BR_DOT)        // >
-#define BR_COLN RIGHT_SHIFT(BR_SEMICOLON)  // :
-#define BR_QUES RIGHT_SHIFT(BR_SLSH)       // ?
+#define BR_DQUO RS(BR_QUOT)               // "
+#define BR_EXLM RS(BR_1)                  // !
+#define BR_AT   RS(BR_2)                  // @
+#define BR_HASH RS(BR_3)                  // #
+#define BR_DLR  RS(BR_4)                  // $
+#define BR_PERC RS(BR_5)                  // %
+#define BR_DIAE RS(BR_6)                  // ¨ (dead)
+#define BR_AMPR RS(BR_7)                  // &
+#define BR_ASTR RS(BR_8)                  // *
+#define BR_LPRN RS(BR_9)                  // (
+#define BR_RPRN RS(BR_0)                  // )
+#define BR_UNDS RS(BR_MINS)               // _
+#define BR_PLUS RS(BR_EQL)                // +
+#define BR_GRV  RS(BR_ACUT)               // ` (dead)
+#define BR_LCBR RS(BR_LBRC)               // {
+#define BR_CIRC RS(BR_TILD)               // ^ (dead)
+#define BR_RCBR RS(BR_RBRC)               // }
+#define BR_PIPE RS(BR_BSLS)               // |
+#define BR_LABK RS(BR_COMM)               // <
+#define BR_RABK RS(BR_DOT)                // >
+#define BR_COLN RS(BR_SEMICOLON)          // :
+#define BR_QUES RS(BR_SLSH)               // ?
 #define BR_SUP1 RALT(BR_1)                // ¹
 #define BR_SUP2 RALT(BR_2)                // ²
 #define BR_SUP3 RALT(BR_3)                // ³
