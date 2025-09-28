@@ -1,3 +1,5 @@
+//This file was made based on the QMK equivalent: https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_brazilian_abnt2.h
+//To see the source of this approach to international layouts check this comment: https://github.com/zmkfirmware/zmk/issues/177#issuecomment-1306247821
 
 // Aliases
 #define BR_QUOT GRAVE                     // '
@@ -49,28 +51,28 @@
 #define BR_DOT  PERIOD                    // .
 #define BR_SEMICOLON SLASH                // ;
 #define BR_SLSH INT1                      // /
-#define BR_DQUO RS(BR_QUOT)               // "
-#define BR_EXLM RS(BR_1)                  // !
-#define BR_AT   RS(BR_2)                  // @
-#define BR_HASH RS(BR_3)                  // #
-#define BR_DLR  RS(BR_4)                  // $
-#define BR_PERC RS(BR_5)                  // %
-#define BR_DIAE RS(BR_6)                  // ¨ (dead)
-#define BR_AMPR RS(BR_7)                  // &
-#define BR_ASTR RS(BR_8)                  // *
-#define BR_LPRN RS(BR_9)                  // (
-#define BR_RPRN RS(BR_0)                  // )
-#define BR_UNDS RS(BR_MINS)               // _
-#define BR_PLUS RS(BR_EQL)                // +
-#define BR_GRV  RS(BR_ACUT)               // ` (dead)
-#define BR_LCBR RS(BR_LBRC)               // {
-#define BR_CIRC RS(BR_TILD)               // ^ (dead)
-#define BR_RCBR RS(BR_RBRC)               // }
-#define BR_PIPE RS(BR_BSLS)               // |
-#define BR_LABK RS(BR_COMM)               // <
-#define BR_RABK RS(BR_DOT)                // >
-#define BR_COLN RS(BR_SEMICOLON)          // :
-#define BR_QUES RS(BR_SLSH)               // ?
+#define BR_DQUO LS(BR_QUOT)               // "
+#define BR_EXLM LS(BR_1)                  // !
+#define BR_AT   LS(BR_2)                  // @
+#define BR_HASH LS(BR_3)                  // #
+#define BR_DLR  LS(BR_4)                  // $
+#define BR_PERC LS(BR_5)                  // %
+#define BR_DIAE LS(BR_6)                  // ¨ (dead)
+#define BR_AMPR LS(BR_7)                  // &
+#define BR_ASTR LS(BR_8)                  // *
+#define BR_LPRN LS(BR_9)                  // (
+#define BR_RPRN LS(BR_0)                  // )
+#define BR_UNDS LS(BR_MINS)               // _
+#define BR_PLUS LS(BR_EQL)                // +
+#define BR_GRV  LS(BR_ACUT)               // ` (dead)
+#define BR_LCBR LS(BR_LBRC)               // {
+#define BR_CIRC LS(BR_TILD)               // ^ (dead)
+#define BR_RCBR LS(BR_RBRC)               // }
+#define BR_PIPE LS(BR_BSLS)               // |
+#define BR_LABK LS(BR_COMM)               // <
+#define BR_RABK LS(BR_DOT)                // >
+#define BR_COLN LS(BR_SEMICOLON)          // :
+#define BR_QUES LS(BR_SLSH)               // ?
 #define BR_SUP1 RALT(BR_1)                // ¹
 #define BR_SUP2 RALT(BR_2)                // ²
 #define BR_SUP3 RALT(BR_3)                // ³
