@@ -142,10 +142,10 @@
                 edit_layer {
                         display-name = "edit";
                         bindings = <
-   &kp ALL  &none    &kp UNDO  &kp DEL  &none          &none    &home     &kp UP     &end       &kp TOP         
-   &kp M0   &kp M1   &kp M2    &kp M3   &none          &none    &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM  
-   &kp Z    &kp CUT  &kp COPY  &paste   &none          &none    &none     &none      &none      &none       
-                     &trans    &trans   &trans         &trans   &trans    &trans
+   &kp ALL  &none    &kp UNDO  &kp DEL  &kp BSPC       &kp DEL   &home     &kp UP     &end       &kp TOP         
+   &kp M0   &kp M1   &kp M2    &kp M3   &none          &none     &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM  
+   &kp Z    &kp CUT  &kp COPY  &paste   &none          &none     &none     &none      &none      &none       
+                     &trans    &trans   &trans         &trans    &trans    &trans
                         >;
                 };
                 symbols_layer {
