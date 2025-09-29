@@ -74,18 +74,24 @@
                     bindings = <&kp BR_CIRC>;
           };
 
-          /* Brackets */
-          less_than { key-positions = <0 10>; bindings = <&kp LESS_THAN>; };
-          greater_than { key-positions = <9 10>; bindings = <&kp GREATER_THAN>; };
-          lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; };
-          rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; };
-          lpar { key-positions = <2 12>; bindings = <&kp LPAR>; };
-          rpar { key-positions = <7 17>; bindings = <&kp RPAR>; };
-          lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; };
-          rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; };
+          /* Parenteses: ( and ) */
+          lbrc { key-positions = <3 13>; bindings = <&kp BR_LPRN>; };
+          rbrc { key-positions = <6 16>; bindings = <&kp BR_RPRN>; };
+          
+          /* Brackets: { and } */
+          lbkt { key-positions = <1 11>; bindings = <&kp BR_LCBR>; };
+          rbkt { key-positions = <8 18>; bindings = <&kp BR_RCBR>; };
+
+          /* Braces: [ and ] */
+          lpar { key-positions = <2 12>; bindings = <&kp BR_LBRC>; };
+          rpar { key-positions = <7 17>; bindings = <&kp BR_RBRC>; };
+
+          /* Slashes */
+          bsls { key-positions = <0 10>; bindings = <&kp BR_BSLS>; };
+          slsh { key-positions = <9 19>; bindings = <&kp BR_SLSH>; };
 
           /* Convenience */
-          del { key-positions = <4 14>; bindings = <&kp BSPC>; };
+          bspc { key-positions = <4 14>; bindings = <&kp BSPC>; };
           esc { key-positions = <5 15>; bindings = <&kp ESC>; };
         };    
 
@@ -93,7 +99,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        display-name = "QWERTY";
+                        display-name = "alpha";
 // -----------------------------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T   |         |  Y  |  U     |  I  |  O  |  P  | 
 // |  A  |  S  |  D  |  F  |  G   |         |  H  |  J     |  K  |  L  |  ;  | 
