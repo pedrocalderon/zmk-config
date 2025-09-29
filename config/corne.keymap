@@ -87,12 +87,11 @@
           rpar { key-positions = <7 17>; bindings = <&kp BR_RBRC>; };
 
           /* Slashes */
-          bsls { key-positions = <0 10>; bindings = <&kp BR_BSLS>; };
-          slsh { key-positions = <9 19>; bindings = <&kp BR_SLSH>; };
+          bsls { key-positions = <4 14>; bindings = <&kp BR_BSLS>; };
+          slsh { key-positions = <5 15>; bindings = <&kp BR_SLSH>; };
 
           /* Convenience */
-          bspc { key-positions = <4 14>; bindings = <&kp BSPC>; };
-          esc { key-positions = <5 15>; bindings = <&kp ESC>; };
+          esc { key-positions = <0 10>; bindings = <&kp ESC>; };
         };    
 
         keymap {
