@@ -26,8 +26,8 @@
 
 /* Mod Sequence (Outer to Inner) */
 #define M0 LALT
-#define M1 LCTRL
-#define M2 LSHFT
+#define M1 LSHFT
+#define M2 LCTRL
 #define M3 LGUI
 
 &caps_word {
@@ -125,6 +125,9 @@
 
           /* Convenience */
           esc { key-positions = <0 10>; bindings = <&kp ESC>; };
+
+          /* Modifiers */
+          ctrl { key-positions = <25 26>; bindings = <&kp LCTRL>; };
         };    
 
         keymap {
@@ -133,18 +136,18 @@
                 alphas_layer {
                         display-name = "alphas";
                         bindings = <
-   &kp Q  &kp W  &kp E     &kp R     &kp T              &kp Y       &kp U        &kp I      &kp O   &kp P         
-   &kp A  &kp S  &kp D     &kp F     &kp G              &kp H       &kp J        &kp K      &kp L   &kp SEMI  
-   &kp Z  &kp X  &kp C     &kp V     &kp B              &kp N       &kp M        &kp COMMA  &kp DOT &kp FSLH       
-                 &kp RET   &mo EDIT  &kp LSHIFT         &kp SPACE   &mo SYMBOLS  &kp ESC
+   &kp Q  &kp W  &kp E     &kp R       &kp T              &kp Y        &kp U      &kp I      &kp O   &kp P         
+   &kp A  &kp S  &kp D     &kp F       &kp G              &kp H        &kp J      &kp K      &kp L   &kp SEMI  
+   &kp Z  &kp X  &kp C     &kp V       &kp B              &kp N        &kp M      &kp COMMA  &kp DOT &kp FSLH       
+                 &kp ESC   &kp LSHIFT  &mo EDIT           &mo SYMBOLS  &kp SPACE  &kp LGUI
                         >;
                 };
                 edit_layer {
                         display-name = "edit";
                         bindings = <
    &kp ALL  &none    &kp UNDO  &none    &none          &none     &home     &kp UP     &end       &kp TOP         
-   &kp M0   &kp M1   &kp M2    &kp M3   &none          &none     &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM  
-   &kp Z    &kp CUT  &kp COPY  &paste   &none          &none     &kp BSPC  &kp DEL    &kp TAB    &none       
+   &kp M0   &kp M1   &kp M2    &kp M3   &none          &none     &kp LEFT  &kp RET    &kp RIGHT  &kp BOTTOM  
+   &kp Z    &kp CUT  &kp COPY  &paste   &none          &none     &kp BSPC  &kp DOWN   &kp TAB    &none       
                      &trans    &trans   &trans         &trans    &trans    &trans
                         >;
                 };
