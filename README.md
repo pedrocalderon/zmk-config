@@ -19,6 +19,17 @@ _Generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer)_
 The initial approach was based on the [jcmkk3 layout](https://github.com/jcmkk3/zmk-config),
 that I initially found in the [KeymapDB](https://keymapdb.com/keymaps/jcmkk3/).
 
+### Localization
+
+Since I'm Brazilian it is important to me to be able to easily configure a layout compatible with the ABNT2 layout, present in most of the
+Brazilian hardware, including my notebook.
+
+For this purpose I used the approach described in this [Github issue comment](https://github.com/zmkfirmware/zmk/issues/177#issuecomment-1306247821)
+This approach is basically to create a mapping file, present in the ./config/keys_abnt2.h, and use this codes to create the layout.
+
+Afterwards I discovered that there is a ZMK module for this, called [ZMK Locales](https://github.com/joelspadin/zmk-locales),
+I expect to test this new approach in the future.
+
 ## Instructions
 
 I have the tendency of not using this keyboard for several months and having to re-learn a lot of stuff
