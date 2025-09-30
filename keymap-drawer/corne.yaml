@@ -39,22 +39,22 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   symbols:
-  - Sft+1
-  - Sft+2
-  - Sft+3
-  - Sft+4
-  - Sft+5
-  - Sft+6
-  - Sft+7
-  - Sft+8
-  - Sft+/
-  - Sft+INT1
-  - ''''
+  - EXLM
+  - '@'
+  - '#'
+  - DLR
+  - PERC
+  - DIAE
+  - AMPR
+  - ASTR
+  - COLN
+  - QUES
+  - TILD
   - '='
   - Sft+=
-  - Sft+8
-  - Sft+[
-  - \
+  - ASTR
+  - GRV
+  - BSLS
   - LGUI
   - LCTRL
   - LSHFT
@@ -62,10 +62,10 @@ layers:
   - ''
   - _
   - '-'
-  - INT1
+  - SLSH
   - ''
   - ''
-  - Sft+\
+  - '|'
   - <
   - '>'
   - ''
@@ -114,29 +114,29 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [7, 8]
-  k: '['
+  k: ACUT
 - p: [6, 7]
-  k: Sft+[
+  k: GRV
 - p: [6, 7, 8]
-  k: ''''
+  k: TILD
 - p: [6, 8]
-  k: Sft+'
+  k: CIRC
 - p: [3, 13]
-  k: Sft+9
+  k: LPRN
 - p: [6, 16]
-  k: Sft+0
+  k: RPRN
 - p: [1, 11]
-  k: Sft+]
+  k: LCBR
 - p: [8, 18]
-  k: Sft+\
+  k: RCBR
 - p: [2, 12]
-  k: ']'
+  k: '{'
 - p: [7, 17]
-  k: \
+  k: '}'
 - p: [4, 14]
-  k: \
+  k: BSLS
 - p: [5, 15]
-  k: INT1
+  k: SLSH
 - p: [0, 10]
   k: ESC
 - p: [25, 26]
