@@ -1,0 +1,143 @@
+layout: {zmk_keyboard: corne, layout_name: five_column_transform}
+layers:
+  alphas: [Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, ;, Z, X, C, V, B, N, M, ',', ., /, ESC, LSHIFT, edit, symbols, SPACE, LGUI]
+  edit:
+  - Ctl+A
+  - ''
+  - Ctl+Z
+  - ''
+  - ''
+  - ''
+  - {t: HOME, s: HOME}
+  - UP
+  - {t: END, s: END}
+  - Ctl+HOME
+  - LALT
+  - LSHFT
+  - LCTRL
+  - LGUI
+  - ''
+  - ''
+  - LEFT
+  - RET
+  - RIGHT
+  - Ctl+END
+  - Z
+  - Sft+DEL
+  - Ctl+INS
+  - {t: Sft+INS, s: Ctl+Sft+V}
+  - ''
+  - ''
+  - BSPC
+  - DOWN
+  - TAB
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  symbols:
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+4
+  - Sft+5
+  - Sft+6
+  - Sft+7
+  - Sft+8
+  - Sft+/
+  - Sft+INT1
+  - ''''
+  - '='
+  - Sft+=
+  - Sft+8
+  - Sft+[
+  - \
+  - LGUI
+  - LCTRL
+  - LSHFT
+  - LALT
+  - ''
+  - _
+  - '-'
+  - INT1
+  - ''
+  - ''
+  - Sft+\
+  - <
+  - '>'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  numbers:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ','
+  - .
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [7, 8]
+  k: '['
+- p: [6, 7]
+  k: Sft+[
+- p: [6, 7, 8]
+  k: ''''
+- p: [6, 8]
+  k: Sft+'
+- p: [3, 13]
+  k: Sft+9
+- p: [6, 16]
+  k: Sft+0
+- p: [1, 11]
+  k: Sft+]
+- p: [8, 18]
+  k: Sft+\
+- p: [2, 12]
+  k: ']'
+- p: [7, 17]
+  k: \
+- p: [4, 14]
+  k: \
+- p: [5, 15]
+  k: INT1
+- p: [0, 10]
+  k: ESC
+- p: [25, 26]
+  k: LCTRL
