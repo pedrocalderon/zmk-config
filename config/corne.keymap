@@ -136,8 +136,8 @@
           esc { key-positions = <0 10>; bindings = <&kp ESC>; };
 
           /* Modifiers */
-          ctrl { key-positions = <23 24>; bindings = <&kp LCTRL>; };
-          ctrl { key-positions = <25 26>; bindings = <&kp LCTRL>; };
+          lctrl { key-positions = <23 24>; bindings = <&kp LCTRL>; };
+          rctrl { key-positions = <25 26>; bindings = <&kp LCTRL>; };
         };    
 
         keymap {
