@@ -14,8 +14,8 @@ layers:
   - Ctl+HOME
   - LALT
   - LSHFT
-  - LCTRL
   - LGUI
+  - LCTRL
   - ''
   - ''
   - LEFT
@@ -55,8 +55,8 @@ layers:
   - ASTR
   - GRV
   - BSLS
-  - LGUI
   - LCTRL
+  - LGUI
   - LSHFT
   - LALT
   - ''
@@ -77,29 +77,29 @@ layers:
   - {t: ▽, type: trans}
   numbers:
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
   - '7'
   - '8'
   - '9'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LCTRL
+  - LGUI
+  - LSHFT
+  - LALT
   - '0'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -134,10 +134,12 @@ combos:
 - p: [7, 17]
   k: '}'
 - p: [4, 14]
-  k: BSLS
+  k: DQUO
 - p: [5, 15]
-  k: SLSH
+  k: QUOT
 - p: [0, 10]
   k: ESC
+- p: [23, 24]
+  k: LCTRL
 - p: [25, 26]
   k: LCTRL
