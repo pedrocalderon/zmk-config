@@ -32,8 +32,8 @@
 /* Mod Sequence (Outer to Inner) */
 #define M0 LALT
 #define M1 LSHFT
-#define M2 LCTRL
-#define M3 LGUI
+#define M2 LGUI
+#define M3 LCTRL
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -125,13 +125,18 @@
           rpar { key-positions = <7 17>; bindings = <&kp BR_RBRC>; };
 
           /* Slashes */
-          bsls { key-positions = <4 14>; bindings = <&kp BR_BSLS>; };
-          slsh { key-positions = <5 15>; bindings = <&kp BR_SLSH>; };
+          /* bsls { key-positions = <4 14>; bindings = <&kp BR_BSLS>; }; */
+          /* slsh { key-positions = <5 15>; bindings = <&kp BR_SLSH>; }; */
+
+          /* Quotes */
+          single_quote { key-positions = <4 14>; bindings = <&kp BR_DQUO>; };
+          double_quote { key-positions = <5 15>; bindings = <&kp BR_QUOT>; };
 
           /* Convenience */
           esc { key-positions = <0 10>; bindings = <&kp ESC>; };
 
           /* Modifiers */
+          ctrl { key-positions = <23 24>; bindings = <&kp LCTRL>; };
           ctrl { key-positions = <25 26>; bindings = <&kp LCTRL>; };
         };    
 
@@ -168,9 +173,9 @@
                 numbers_layer {
                         display-name = "numbers";
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans         &trans   &trans  &trans     &trans   &trans         
-   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5         &kp N6   &kp N7  &kp N8     &kp N9   &kp N0  
-   &trans  &trans  &trans  &trans  &trans         &trans   &trans  &kp COMMA  &kp DOT  &none       
+   &trans  &kp N7  &kp N8  &kp N9  &trans         &trans   &trans  &trans     &trans   &trans         
+   &none   &kp N4  &kp N5  &kp N6  &trans         &trans   &kp M3  &kp M2     &kp M1   &kp M0  
+   &kp N0  &kp N1  &kp N2  &kp N3  &trans         &trans   &trans  &kp COMMA  &kp DOT  &none       
                    &trans  &trans  &trans         &trans   &trans  &trans
                         >;
                 };
