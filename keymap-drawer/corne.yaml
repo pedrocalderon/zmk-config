@@ -63,10 +63,10 @@ layers:
   - Ctl+INS
   - {t: Sft+INS, s: Ctl+Sft+V}
   - ''
-  - ''
+  - LCTRL(BSPC)
   - BSPC
   - DEL
-  - none
+  - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
