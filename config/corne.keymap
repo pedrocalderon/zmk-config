@@ -21,6 +21,7 @@
 #define SYMBOLS 3
 
 /* Shortcuts */
+//L_ stands for LOCAL, this is to avoid redefinition warnings during the build
 #define L_CUT LS(DEL)
 #define L_COPY LC(INS)
 #define PASTE LS(INS)
@@ -155,10 +156,10 @@
                 edit_layer {
                         display-name = "edit";
                         bindings = <
-   &kp ALL  &none      &kp L_UNDO  &none    &none          &none     &home     &kp UP     &end       &kp TOP         
-   &kp M0   &kp M1     &kp M2    &kp M3   &none          &kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM  
-   &kp Z    &kp L_CUT  &kp L_COPY  &paste   &none          &none     &kp BSPC  &kp DEL    &kp none   &none       
-                       &trans    &trans   &trans         &trans    &trans    &trans
+   &kp ALL  &none      &kp L_UNDO  &none    &none          &none            &home     &kp UP     &end       &kp TOP         
+   &kp M0   &kp M1     &kp M2      &kp M3   &none          &kp TAB          &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM  
+   &kp Z    &kp L_CUT  &kp L_COPY  &paste   &none          &kp LCTRL(BSPC)  &kp BSPC  &kp DEL    &none   &none       
+                       &trans      &trans   &trans         &trans           &trans    &trans
                         >;
                 };
                 numbers_layer {
