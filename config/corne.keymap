@@ -17,8 +17,8 @@
 /* Layers */
 #define ALPHAS 0
 #define EDIT 1
-#define SYMBOLS 2
-#define NUMBERS 3
+#define NUMBERS 2
+#define SYMBOLS 3
 
 /* Shortcuts */
 #define CUT LS(DEL)
@@ -45,8 +45,8 @@
         conditional_layers {
             compatible = "zmk,conditional-layers";
             tri_layer {
-                if-layers = <EDIT SYMBOLS>;
-                then-layer = <NUMBERS>;
+                if-layers = <EDIT NUMBERS>;
+                then-layer = <SYMBOLS>;
             };
         };
 
@@ -136,8 +136,8 @@
           esc { key-positions = <0 10>; bindings = <&kp ESC>; };
 
           /* Modifiers */
-          lctrl { key-positions = <23 24>; bindings = <&kp LCTRL>; };
-          rctrl { key-positions = <25 26>; bindings = <&kp LCTRL>; };
+          /* lctrl { key-positions = <23 24>; bindings = <&kp LCTRL>; }; */
+          /* rctrl { key-positions = <25 26>; bindings = <&kp LCTRL>; }; */
         };    
 
         keymap {
@@ -146,19 +146,28 @@
                 alphas_layer {
                         display-name = "alphas";
                         bindings = <
-   &kp Q  &kp W  &kp E     &kp R       &kp T              &kp Y        &kp U      &kp I      &kp O   &kp P         
-   &kp A  &kp S  &kp D     &kp F       &kp G              &kp H        &kp J      &kp K      &kp L   &kp SEMI  
-   &kp Z  &kp X  &kp C     &kp V       &kp B              &kp N        &kp M      &kp COMMA  &kp DOT &kp FSLH       
-                 &kp ESC   &kp LSHIFT  &mo EDIT           &mo SYMBOLS  &kp SPACE  &kp LGUI
+   &kp Q  &kp W  &kp E      &kp R       &kp T                    &kp Y            &kp U      &kp I      &kp O   &kp P         
+   &kp A  &kp S  &kp D      &kp F       &kp G                    &kp H            &kp J      &kp K      &kp L   &kp SEMI  
+   &kp Z  &kp X  &kp C      &kp V       &kp B                    &kp N            &kp M      &kp COMMA  &kp DOT &kp FSLH       
+                 &kp LCTRL  &kp LSHIFT  &lt EDIT SPACE           &lt NUMBERS RET  &kp LGUI  &kp LALT
                         >;
                 };
                 edit_layer {
                         display-name = "edit";
                         bindings = <
    &kp ALL  &none    &kp UNDO  &none    &none          &none     &home     &kp UP     &end       &kp TOP         
-   &kp M0   &kp M1   &kp M2    &kp M3   &none          &none     &kp LEFT  &kp RET    &kp RIGHT  &kp BOTTOM  
-   &kp Z    &kp CUT  &kp COPY  &paste   &none          &none     &kp BSPC  &kp DOWN   &kp TAB    &none       
+   &kp M0   &kp M1   &kp M2    &kp M3   &none          &kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM  
+   &kp Z    &kp CUT  &kp COPY  &paste   &none          &none     &kp BSPC  &kp DEL    &kp none   &none       
                      &trans    &trans   &trans         &trans    &trans    &trans
+                        >;
+                };
+                numbers_layer {
+                        display-name = "numbers";
+                        bindings = <
+   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5               &kp N6         &kp N7        &kp N8        &kp N9         &kp N0  
+   &kp LGUI(N1)  &kp LGUI(N2)  &kp LGUI(N3)  &kp LGUI(N4)  &kp LGUI(N5)         &kp LGUI(N6)   &kp LGUI(N7)  &kp LGUI(N8)  &kp LGUI(N9)   &kp LGUI(N0)  
+   &none         &none         &none         &none         &none                &none          &none         &kp COMMA     &kp DOT        &none       
+                               &trans        &trans        &trans               &trans         &trans        &trans
                         >;
                 };
                 symbols_layer {
@@ -166,17 +175,8 @@
                         bindings = <
    &kp BR_EXLM  &kp BR_AT  &kp BR_HASH    &kp BR_DLR   &kp BR_PERC          &kp BR_DIAE    &kp BR_AMPR  &kp BR_ASTR  &kp  BR_COLN   &kp BR_QUES         
    &kp BR_TILD  &kp EQUAL  &kp LS(EQUAL)  &kp BR_ASTR  &kp BR_GRV           &kp BR_BSLS    &kp M3       &kp M2       &kp M1         &kp M0  
-   &none        &kp UNDER  &kp MINUS      &kp BR_SLSH  &none                &none          &kp BR_PIPE  &kp LT       &kp GT         &none       
+   &none        &kp UNDER  &kp MINUS      &kp BR_SLSH  &kp BR_BSLS          &none          &kp BR_PIPE  &kp LT       &kp GT         &none       
                            &trans         &trans       &trans               &trans   &trans  &trans
-                        >;
-                };
-                numbers_layer {
-                        display-name = "numbers";
-                        bindings = <
-   &trans  &kp N7  &kp N8  &kp N9  &trans         &trans   &trans  &trans     &trans   &trans         
-   &none   &kp N4  &kp N5  &kp N6  &trans         &trans   &kp M3  &kp M2     &kp M1   &kp M0  
-   &kp N0  &kp N1  &kp N2  &kp N3  &trans         &trans   &trans  &kp COMMA  &kp DOT  &none       
-                   &trans  &trans  &trans         &trans   &trans  &trans
                         >;
                 };
 
