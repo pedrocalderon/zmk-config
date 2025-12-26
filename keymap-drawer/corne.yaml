@@ -124,11 +124,11 @@ layers:
   - QUES
   - TILD
   - '='
-  - Sft+=
+  - +
   - ASTR
   - GRV
   - BSLS
-  - LC
+  - LCTRL
   - LGUI
   - LSHFT
   - LALT
