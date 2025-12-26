@@ -34,7 +34,7 @@
 #define M0 LALT
 #define M1 LSHFT
 #define M2 LGUI
-#define M3 LCTRL
+#define M3 LC
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -135,10 +135,6 @@
 
           /* Convenience */
           esc { key-positions = <0 10>; bindings = <&kp ESC>; };
-
-          /* Modifiers */
-          /* lctrl { key-positions = <23 24>; bindings = <&kp LCTRL>; }; */
-          /* rctrl { key-positions = <25 26>; bindings = <&kp LCTRL>; }; */
         };    
 
         keymap {
@@ -150,16 +146,16 @@
    &kp Q  &kp W  &kp E      &kp R       &kp T                    &kp Y            &kp U      &kp I      &kp O   &kp P         
    &kp A  &kp S  &kp D      &kp F       &kp G                    &kp H            &kp J      &kp K      &kp L   &kp SEMI  
    &kp Z  &kp X  &kp C      &kp V       &kp B                    &kp N            &kp M      &kp COMMA  &kp DOT &kp FSLH       
-                 &kp LCTRL  &kp LSHIFT  &lt EDIT SPACE           &lt NUMBERS RET  &kp LGUI  &kp LALT
+                 &kp LC  &kp LSHIFT  &lt EDIT SPACE           &lt NUMBERS RET  &kp LGUI  &kp LALT
                         >;
                 };
                 edit_layer {
                         display-name = "edit";
                         bindings = <
-   &kp ALL  &none      &kp L_UNDO  &none    &none          &none            &home     &kp UP     &end       &kp TOP         
-   &kp M0   &kp M1     &kp M2      &kp M3   &none          &kp TAB          &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM  
-   &kp Z    &kp L_CUT  &kp L_COPY  &paste   &none          &kp LCTRL(BSPC)  &kp BSPC  &kp DEL    &none   &none       
-                       &trans      &trans   &trans         &trans           &trans    &trans
+   &kp ALL  &none      &kp L_UNDO  &none    &none          &none         &home     &kp UP     &end       &kp TOP         
+   &kp M0   &kp M1     &kp M2      &kp M3   &none          &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM  
+   &kp Z    &kp L_CUT  &kp L_COPY  &paste   &none          &kp LC(BSPC)  &kp BSPC  &kp DEL    &none   &none       
+                       &trans      &trans   &trans         &trans        &trans    &trans
                         >;
                 };
                 numbers_layer {
