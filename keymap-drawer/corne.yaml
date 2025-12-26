@@ -64,7 +64,7 @@ layers:
   - {t: Sft+INS, s: Ctl+Sft+V}
   - ''
   - Ctl+BSPC
-  - BSPC
+  - {t: BSPC, s: DEL}
   - DEL
   - ''
   - ''
