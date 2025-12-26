@@ -27,8 +27,6 @@
 #define PASTE LS(INS)
 #define L_UNDO LC(Z)
 #define ALL LC(A)
-#define TOP LC(HOME)
-#define BOTTOM LC(END)
 
 /* Mod Sequence (Outer to Inner) */
 #define M0 LALT
@@ -152,8 +150,8 @@
                 edit_layer {
                         display-name = "edit";
                         bindings = <
-   &kp ALL  &none      &kp L_UNDO  &none    &none          &none         &home     &kp UP     &end       &kp TOP
-   &kp M0   &kp M1     &kp M2      &kp M3   &none          &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp BOTTOM
+   &kp ALL  &none      &kp L_UNDO  &none    &none          &none         &home     &kp UP     &end       &kp LC(HOME)
+   &kp M0   &kp M1     &kp M2      &kp M3   &none          &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp LC(END)
    &kp Z    &kp L_CUT  &kp L_COPY  &paste   &none          &kp LC(BSPC)  &bspc     &kp DEL    &none      &none
                        &trans      &trans   &trans         &trans        &trans    &trans
                         >;
