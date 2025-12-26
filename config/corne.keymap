@@ -169,7 +169,7 @@
                         display-name = "symbols";
                         bindings = <
    &kp BR_EXLM  &kp BR_AT  &kp BR_HASH    &kp BR_DLR   &kp BR_PERC          &kp BR_DIAE    &kp BR_AMPR  &kp BR_ASTR  &kp  BR_COLN   &kp BR_QUES         
-   &kp BR_TILD  &kp EQUAL  &kp LS(EQUAL)  &kp BR_ASTR  &kp BR_GRV           &kp BR_BSLS    &kp M3       &kp M2       &kp M1         &kp M0  
+   &kp BR_TILD  &kp EQUAL  &kp PLUS       &kp BR_ASTR  &kp BR_GRV           &kp BR_BSLS    &kp LCTRL    &kp LGUI     &kp LSHFT      &kp LALT  
    &none        &kp UNDER  &kp MINUS      &kp BR_SLSH  &kp BR_BSLS          &none          &kp BR_PIPE  &kp LT       &kp GT         &none       
                            &trans         &trans       &trans               &trans   &trans  &trans
                         >;
