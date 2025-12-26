@@ -38,9 +38,9 @@ layers:
   - LGUI
   - LALT
   edit:
-  - Ctl+A
   - ''
-  - Ctl+Z
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -51,19 +51,19 @@ layers:
   - LALT
   - LSHFT
   - LGUI
-  - LC
+  - LCTRL
   - ''
   - TAB
   - LEFT
   - DOWN
   - RIGHT
   - PG DN
-  - Z
-  - Sft+DEL
-  - Ctl+INS
+  - ''
+  - ''
+  - ''
   - {t: Sft+INS, s: Ctl+Sft+V}
   - ''
-  - Ctl+BSPC
+  - BSPC
   - {t: BSPC, s: DEL}
   - DEL
   - ''
