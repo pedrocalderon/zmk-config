@@ -47,7 +47,7 @@ layers:
   - {t: HOME, s: HOME}
   - UP
   - {t: END, s: END}
-  - Ctl+HOME
+  - PG UP
   - LALT
   - LSHFT
   - LGUI
@@ -57,7 +57,7 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - Ctl+END
+  - PG DN
   - Z
   - Sft+DEL
   - Ctl+INS
