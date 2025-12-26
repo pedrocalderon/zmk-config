@@ -150,9 +150,9 @@
                 edit_layer {
                         display-name = "edit";
                         bindings = <
-   &kp ALL  &none      &kp L_UNDO  &none    &none          &none         &home     &kp UP     &end       &kp PG_UP
-   &kp M0   &kp M1     &kp M2      &kp M3   &none          &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PG_DN
-   &kp Z    &kp L_CUT  &kp L_COPY  &paste   &none          &kp LC(BSPC)  &bspc     &kp DEL    &none      &none
+   &none    &none      &none       &none    &none          &none         &home     &kp UP     &end       &kp PG_UP
+   &kp LALT &kp LSHFT  &kp LGUI    &kp LCTRL &none         &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PG_DN
+   &none    &none      &none       &paste   &none          &kp BSPC      &bspc     &kp DEL    &none      &none
                        &trans      &trans   &trans         &trans        &trans    &trans
                         >;
                 };
