@@ -31,7 +31,7 @@ layers:
   - ','
   - .
   - /
-  - LCTRL
+  - LC
   - LSHIFT
   - {t: SPACE, h: edit}
   - {t: RET, h: numbers}
@@ -51,7 +51,7 @@ layers:
   - LALT
   - LSHFT
   - LGUI
-  - LCTRL
+  - LC
   - ''
   - TAB
   - LEFT
@@ -63,7 +63,7 @@ layers:
   - Ctl+INS
   - {t: Sft+INS, s: Ctl+Sft+V}
   - ''
-  - LCTRL(BSPC)
+  - Ctl+BSPC
   - BSPC
   - DEL
   - ''
@@ -128,7 +128,7 @@ layers:
   - ASTR
   - GRV
   - BSLS
-  - LCTRL
+  - LC
   - LGUI
   - LSHFT
   - LALT
