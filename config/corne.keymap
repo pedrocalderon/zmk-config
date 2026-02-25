@@ -133,7 +133,7 @@
 
           /* Convenience */
           esc { key-positions = <0 10>; bindings = <&kp ESC>; };
-          esc { key-positions = <13 23>; bindings = <&kp ESC>; };
+          esc2 { key-positions = <13 23>; bindings = <&kp ESC>; };
         };    
 
         keymap {
