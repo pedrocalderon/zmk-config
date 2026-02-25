@@ -175,3 +175,5 @@ combos:
   k: QUOT
 - p: [0, 10]
   k: ESC
+- p: [13, 23]
+  k: ESC
