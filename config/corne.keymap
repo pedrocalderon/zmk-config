@@ -142,10 +142,10 @@
                 alphas_layer {
                         display-name = "alphas";
                         bindings = <
-   &kp Q  &kp W  &kp E      &kp R       &kp T                    &kp Y            &kp U      &kp I      &kp O   &kp P         
-   &kp A  &kp S  &kp D      &kp F       &kp G                    &kp H            &kp J      &kp K      &kp L   &kp SEMI  
-   &kp Z  &kp X  &kp C      &kp V       &kp B                    &kp N            &kp M      &kp COMMA  &kp DOT &kp FSLH       
-                 &kp LCTRL  &kp LSHIFT  &lt EDIT SPACE           &lt NUMBERS RET  &kp LGUI  &kp LALT
+   &kp Q  &kp W  &kp E            &kp R            &kp T               &kp Y            &kp U           &kp I      &kp O   &kp P         
+   &kp A  &kp S  &kp D            &kp F            &kp G               &kp H            &kp J           &kp K      &kp L   &kp SEMI  
+   &kp Z  &kp X  &kp C            &kp V            &kp B               &kp N            &kp M           &kp COMMA  &kp DOT &kp FSLH       
+                 &mt LCTRL MINUS  &mt LSHIFT BSPC  &lt EDIT ESC        &lt NUMBERS RET  &mt LGUI SPACE  &mt LALT BR_HASH
                         >;
                 };
                 edit_layer {
@@ -153,7 +153,7 @@
                         bindings = <
    &none    &none      &none       &none    &none          &none         &home     &kp UP     &end       &kp PG_UP
    &kp LALT &kp LSHFT  &kp LGUI    &kp LCTRL &none         &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PG_DN
-   &none    &none      &none       &paste   &none          &kp BSPC      &bspc     &kp DEL    &none      &none
+   &none    &none      &none       &paste   &none          &kp LC(BSPC)  &bspc     &kp DEL    &none      &none
                        &trans      &trans   &trans         &trans        &trans    &trans
                         >;
                 };
