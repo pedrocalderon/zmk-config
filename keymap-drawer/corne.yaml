@@ -31,12 +31,12 @@ layers:
   - ','
   - .
   - /
-  - LCTRL
-  - LSHIFT
-  - {t: SPACE, h: edit}
+  - {t: '-', h: LCTRL}
+  - {t: BSPC, h: LSHIFT}
+  - {t: ESC, h: edit}
   - {t: RET, h: numbers}
-  - LGUI
-  - LALT
+  - {t: SPACE, h: LGUI}
+  - {t: '#', h: LALT}
   edit:
   - ''
   - ''
@@ -63,7 +63,7 @@ layers:
   - ''
   - {t: Sft+INS, s: Ctl+Sft+V}
   - ''
-  - BSPC
+  - Ctl+BSPC
   - {t: BSPC, s: DEL}
   - DEL
   - ''
