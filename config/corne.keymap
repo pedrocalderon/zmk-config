@@ -97,7 +97,7 @@
                     timeout-ms = <50>;
                     key-positions = <0 1 2 3>;
                     bindings = <&tog ZMK>;
-                    layers = <SYMBOLS, ZMK>;
+                    layers = <SYMBOLS ZMK>;
           };
 
           combo_mouse_layer_hold {
