@@ -150,32 +150,48 @@ layers:
   - {t: ▽, type: trans}
   zmk: ['', '', '', '', OUT TOG, '', '', '', '', '', '', '', '', '', '&sys_reset', '&sys_reset', BT NXT, BT PRV, '', '', BT CLR, '', '', '', '&bootloader', '&bootloader',
     '', '', '', '', '', '', '', '', '', '']
+  mouse: ['', '&mkp LCLK', '&mkp MCLK', '&mkp RCLK', '', '', '', '&mmv MOVE_UP', '', '', '', '', '', '', '', '', '&mmv MOVE_RIGHT', '&mmv MOVE_DOWN', '&mmv MOVE_LEFT',
+    '', '', '', '', '', '', '&msc SCRL_LEFT', '&msc SCRL_DOWN', '&msc SCRL_UP', '&msc SCRL_RIGHT', '', '', '', '', '', '', '']
+  none: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 combos:
-- p: [0, 1, 2, 3, 6, 7, 8, 9]
+- p: [0, 1, 2, 3]
   k: {t: zmk, h: toggle}
+  l: [symbols]
 - p: [7, 8]
   k: ACUT
+  l: [alphas]
 - p: [6, 7]
   k: GRV
+  l: [alphas]
 - p: [6, 7, 8]
   k: TILD
+  l: [alphas]
 - p: [6, 8]
   k: CIRC
+  l: [alphas]
 - p: [3, 13]
   k: LPRN
+  l: [alphas]
 - p: [6, 16]
   k: RPRN
+  l: [alphas]
 - p: [1, 11]
   k: LCBR
+  l: [alphas]
 - p: [8, 18]
   k: RCBR
+  l: [alphas]
 - p: [2, 12]
   k: '{'
+  l: [alphas]
 - p: [7, 17]
   k: '}'
+  l: [alphas]
 - p: [4, 14]
   k: DQUO
+  l: [alphas]
 - p: [5, 15]
   k: QUOT
+  l: [alphas]
 - p: [16, 17]
   k: ESC
