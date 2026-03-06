@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
+#include <dt-bindings/zmk/outputs.h>
 
 // keymap-drawer config: https://github.com/caksoylar/keymap-drawer?tab=readme-ov-file#zmk-locale-headers
 #ifndef KEYMAP_DRAWER
@@ -19,6 +19,7 @@
 #define EDIT 1
 #define NUMBERS 2
 #define SYMBOLS 3
+#define ZMK 4
 
 /* Shortcuts */
 //L_ stands for LOCAL, this is to avoid redefinition warnings during the build
@@ -90,6 +91,12 @@
             10  11  12  13  14     15  16  17  18  19
             20  21  22  23  24     25  26  27  28  29
                     30  31  32     33  34  35          */
+          combo_zmk_layer_toggle {
+                    timeout-ms = <50>;
+                    key-positions = <0 1 2 3 6 7 8 9>;
+                    bindings = <&tog ZMK>;
+          };
+
           combo_acute {
                     timeout-ms = <50>;
                     key-positions = <7 8>;
@@ -132,8 +139,7 @@
           double_quote { key-positions = <5 15>; bindings = <&kp BR_QUOT>; };
 
           /* Convenience */
-          esc { key-positions = <0 10>; bindings = <&kp ESC>; };
-          esc2 { key-positions = <13 23>; bindings = <&kp ESC>; };
+          esc { key-positions = <16 17>; bindings = <&kp ESC>; };
         };    
 
         keymap {
@@ -173,6 +179,20 @@
    &kp BR_TILD  &kp EQUAL  &kp PLUS       &kp BR_ASTR  &kp BR_GRV           &kp BR_BSLS    &kp LCTRL    &kp LGUI     &kp LSHFT      &kp LALT  
    &none        &kp UNDER  &kp MINUS      &kp BR_SLSH  &kp BR_BSLS          &none          &kp BR_PIPE  &kp LT       &kp GT         &none       
                            &trans         &trans       &trans               &trans   &trans  &trans
+                        >;
+                };
+
+                // This layer will have behaviours ralated to the ZMK firmware controll
+                // Bluetooth pairing settings
+                // Reset and debug mode
+                // Output controll toggle
+                zmk_control_layer {
+                        display-name = "zmk";
+                        bindings = <
+   &none       &none  &none  &none  &out OUT_TOG       &none       &none       &none       &none  &none         
+   &none       &none  &none  &none  &sys_reset         &sys_reset  &bt BT_NXT  &bt BT_PRV  &none  &none  
+   &bt BT_CLR  &none  &none  &none  &bootloader        &bootloader &none       &none       &none  &none       
+                      &none  &none  &none              &none       &none       &none
                         >;
                 };
 
