@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
-  alphas: [Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, ;, Z, X, C, V, B, N, M, ',', ., /, '-', LSHIFT, edit, numbers, SPACE, '#']
+  alphas: [Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, ;, Z, X, C, V, B, N, M, ',', ., /, RET, LSHIFT, edit, numbers, LSHIFT, SPACE]
   edit:
   - ''
   - ''
