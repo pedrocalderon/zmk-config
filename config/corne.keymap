@@ -116,7 +116,7 @@
           combo_l_ctrl {
                     timeout-ms = <50>;
                     key-positions = <34 17>;
-                    bindings = <&kp LGUI>;
+                    bindings = <&kp LCTRL>;
           };
 
           combo_l_gui {
@@ -140,7 +140,7 @@
           combo_r_ctrl {
                     timeout-ms = <50>;
                     key-positions = <31 12>;
-                    bindings = <&kp LGUI>;
+                    bindings = <&kp LCTRL>;
           };
 
           combo_r_gui {
@@ -216,28 +216,28 @@
                 edit_layer {
                         display-name = "edit";
                         bindings = <
-   &none  &none  &none   &none   &none         &none         &home     &kp UP     &end       &kp PG_UP
-   &none  &none  &none   &none   &none         &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PG_DN
-   &none  &none  &none   &paste  &none         &kp LC(BSPC)  &bspc     &kp DEL    &none      &none
+   &none     &none     &none       &none       &none         &none         &home     &kp UP     &end       &kp PG_UP
+   &kp LALT  &kp LGUI  &kp LCTRL   &kp LSHIFT  &none         &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PG_DN
+   &none     &none     &none       &paste      &none         &kp LC(BSPC)  &bspc     &kp DEL    &none      &none
                  &trans  &trans  &trans        &trans        &trans    &trans
                         >;
                 };
                 numbers_layer {
                         display-name = "numbers";
                         bindings = <
-   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5               &kp N6         &kp N7        &kp N8        &kp N9         &kp N0  
-   &kp F1        &kp F2        &kp F3        &kp F4        &kp F5               &kp F6         &kp F7        &kp F8        &kp F9         &kp F10  
-   &kp F11       &kp F12       &none         &none         &none                &none          &none         &kp COMMA     &kp DOT        &none       
-                               &trans        &trans        &trans               &trans         &trans        &trans
+   &kp N1   &kp N2   &kp N3   &kp N4  &kp N5               &kp N6  &kp N7      &kp N8     &kp N9    &kp N0  
+   &kp F1   &kp F2   &kp F3   &kp F4  &kp F5               &kp F6  &kp LSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  
+   &kp F11  &kp F12  &none    &none   &none                &none   &none       &kp COMMA  &kp DOT   &none       
+                     &trans   &trans  &trans               &trans  &trans      &trans
                         >;
                 };
                 symbols_layer {
                         display-name = "symbols";
                         bindings = <
-   &kp BR_EXLM  &kp BR_AT  &kp BR_HASH    &kp BR_DLR   &kp BR_PERC          &kp BR_DIAE      &kp BR_AMPR  &kp BR_ASTR  &kp  BR_COLN   &kp BR_QUES         
-   &kp BR_TILD  &kp EQUAL  &kp PLUS       &kp BR_ASTR  &kp BR_GRV           &kp BR_BSLS      &none        &none        &none          &none  
-   &none        &kp UNDER  &kp MINUS      &kp BR_SLSH  &kp BR_BSLS          &none            &kp BR_PIPE  &kp LT       &kp GT         &none       
-                           &trans         &trans       &trans               &trans   &trans  &trans
+   &kp BR_EXLM       &kp BR_AT       &kp BR_HASH     &kp BR_DLR          &kp BR_PERC          &kp BR_DIAE  &kp BR_AMPR  &kp BR_ASTR  &kp  BR_COLN   &kp BR_QUES         
+   &mt LALT BR_TILD  &mt LGUI EQUAL  &mt LCTRL PLUS  &mt LSHIFT BR_ASTR  &kp BR_GRV           &kp BR_BSLS  &kp LSHIFT   &kp LCTRL    &kp LGUI       &kp LALT  
+   &none             &kp UNDER       &kp MINUS       &kp BR_SLSH         &kp BR_BSLS          &none        &kp BR_PIPE  &kp LT       &kp GT         &none       
+                                     &trans          &trans              &trans               &trans       &trans       &trans
                         >;
                 };
 
