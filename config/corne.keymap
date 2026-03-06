@@ -107,6 +107,54 @@
                     slow-release;
           };
 
+          combo_l_shift {
+                    timeout-ms = <50>;
+                    key-positions = <34 16>;
+                    bindings = <&kp LSHIFT>;
+          };
+
+          combo_l_ctrl {
+                    timeout-ms = <50>;
+                    key-positions = <34 17>;
+                    bindings = <&kp LGUI>;
+          };
+
+          combo_l_gui {
+                    timeout-ms = <50>;
+                    key-positions = <34 18>;
+                    bindings = <&kp LGUI>;
+          };
+
+          combo_l_alt {
+                    timeout-ms = <50>;
+                    key-positions = <34 19>;
+                    bindings = <&kp LGUI>;
+          };
+
+          combo_r_shift {
+                    timeout-ms = <50>;
+                    key-positions = <31 13>;
+                    bindings = <&kp LSHIFT>;
+          };
+
+          combo_r_ctrl {
+                    timeout-ms = <50>;
+                    key-positions = <31 12>;
+                    bindings = <&kp LGUI>;
+          };
+
+          combo_r_gui {
+                    timeout-ms = <50>;
+                    key-positions = <31 11>;
+                    bindings = <&kp LGUI>;
+          };
+
+          combo_r_alt {
+                    timeout-ms = <50>;
+                    key-positions = <31 10>;
+                    bindings = <&kp LGUI>;
+          };
+
           // Portugueese accentuation combos
           combo_acute {
                     timeout-ms = <50>;
@@ -159,19 +207,19 @@
                 alphas_layer {
                         display-name = "alphas";
                         bindings = <
-   &kp Q  &kp W  &kp E            &kp R            &kp T               &kp Y            &kp U           &kp I      &kp O   &kp P         
-   &kp A  &kp S  &kp D            &kp F            &kp G               &kp H            &kp J           &kp K      &kp L   &kp SEMI  
-   &kp Z  &kp X  &kp C            &kp V            &kp B               &kp N            &kp M           &kp COMMA  &kp DOT &kp FSLH       
-                 &mt LCTRL MINUS  &mt LSHIFT BSPC  &lt EDIT ESC        &lt NUMBERS RET  &mt LGUI SPACE  &mt LALT BR_HASH
+   &kp Q  &kp W  &kp E      &kp R       &kp T               &kp Y        &kp U      &kp I      &kp O   &kp P         
+   &kp A  &kp S  &kp D      &kp F       &kp G               &kp H        &kp J      &kp K      &kp L   &kp SEMI  
+   &kp Z  &kp X  &kp C      &kp V       &kp B               &kp N        &kp M      &kp COMMA  &kp DOT &kp FSLH       
+                 &kp MINUS  &kp LSHIFT  &mo EDIT            &mo NUMBERS  &kp SPACE  &mt BR_HASH
                         >;
                 };
                 edit_layer {
                         display-name = "edit";
                         bindings = <
-   &none    &none      &none       &none    &none          &none         &home     &kp UP     &end       &kp PG_UP
-   &kp LALT &kp LSHFT  &kp LGUI    &kp LCTRL &none         &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PG_DN
-   &none    &none      &none       &paste   &none          &kp LC(BSPC)  &bspc     &kp DEL    &none      &none
-                       &trans      &trans   &trans         &trans        &trans    &trans
+   &none  &none  &none   &none   &none         &none         &home     &kp UP     &end       &kp PG_UP
+   &none  &none  &none   &none   &none         &kp TAB       &kp LEFT  &kp DOWN   &kp RIGHT  &kp PG_DN
+   &none  &none  &none   &paste  &none         &kp LC(BSPC)  &bspc     &kp DEL    &none      &none
+                 &trans  &trans  &trans        &trans        &trans    &trans
                         >;
                 };
                 numbers_layer {
@@ -186,9 +234,9 @@
                 symbols_layer {
                         display-name = "symbols";
                         bindings = <
-   &kp BR_EXLM  &kp BR_AT  &kp BR_HASH    &kp BR_DLR   &kp BR_PERC          &kp BR_DIAE    &kp BR_AMPR  &kp BR_ASTR  &kp  BR_COLN   &kp BR_QUES         
-   &kp BR_TILD  &kp EQUAL  &kp PLUS       &kp BR_ASTR  &kp BR_GRV           &kp BR_BSLS    &kp LCTRL    &kp LGUI     &kp LSHFT      &kp LALT  
-   &none        &kp UNDER  &kp MINUS      &kp BR_SLSH  &kp BR_BSLS          &none          &kp BR_PIPE  &kp LT       &kp GT         &none       
+   &kp BR_EXLM  &kp BR_AT  &kp BR_HASH    &kp BR_DLR   &kp BR_PERC          &kp BR_DIAE      &kp BR_AMPR  &kp BR_ASTR  &kp  BR_COLN   &kp BR_QUES         
+   &kp BR_TILD  &kp EQUAL  &kp PLUS       &kp BR_ASTR  &kp BR_GRV           &kp BR_BSLS      &none        &none        &none          &none  
+   &none        &kp UNDER  &kp MINUS      &kp BR_SLSH  &kp BR_BSLS          &none            &kp BR_PIPE  &kp LT       &kp GT         &none       
                            &trans         &trans       &trans               &trans   &trans  &trans
                         >;
                 };

@@ -49,3 +49,7 @@ Particularly interested in the combos:
 - ([{}]) in different combo positions, should test
 
 ## Ideas
+
+## Faltando
+
+Repensar na layer de mouse, não da pra usar modificadores com click
