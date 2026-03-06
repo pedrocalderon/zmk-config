@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 // keymap-drawer config: https://github.com/caksoylar/keymap-drawer?tab=readme-ov-file#zmk-locale-headers
 #ifndef KEYMAP_DRAWER
@@ -20,6 +21,7 @@
 #define NUMBERS 2
 #define SYMBOLS 3
 #define ZMK 4
+#define MOUSE 5
 
 /* Shortcuts */
 //L_ stands for LOCAL, this is to avoid redefinition warnings during the build
@@ -95,48 +97,50 @@
                     timeout-ms = <50>;
                     key-positions = <0 1 2 3>;
                     bindings = <&tog ZMK>;
+                    layers = <SYMBOLS>;
           };
 
+          // Portugueese accentuation combos
           combo_acute {
                     timeout-ms = <50>;
                     key-positions = <7 8>;
                     bindings = <&kp BR_ACUT>;
+                    layers = <ALPHAS>;
           };
           combo_grave {
                     timeout-ms = <50>;
                     key-positions = <6 7>;
                     bindings = <&kp BR_GRV>;
+                    layers = <ALPHAS>;
           };
           combo_tilde {
                     timeout-ms = <50>;
                     key-positions = <6 7 8>;
                     bindings = <&kp BR_TILD>;
+                    layers = <ALPHAS>;
           };
           combo_circ {
                     timeout-ms = <50>;
                     key-positions = <6 8>;
                     bindings = <&kp BR_CIRC>;
+                    layers = <ALPHAS>;
           };
 
           /* Parenteses: ( and ) */
-          lbrc { key-positions = <3 13>; bindings = <&kp BR_LPRN>; };
-          rbrc { key-positions = <6 16>; bindings = <&kp BR_RPRN>; };
+          lbrc { key-positions = <3 13>; bindings = <&kp BR_LPRN>; layers = <ALPHAS>; };
+          rbrc { key-positions = <6 16>; bindings = <&kp BR_RPRN>; layers = <ALPHAS>; };
           
           /* Brackets: { and } */
-          lbkt { key-positions = <1 11>; bindings = <&kp BR_LCBR>; };
-          rbkt { key-positions = <8 18>; bindings = <&kp BR_RCBR>; };
+          lbkt { key-positions = <1 11>; bindings = <&kp BR_LCBR>; layers = <ALPHAS>; };
+          rbkt { key-positions = <8 18>; bindings = <&kp BR_RCBR>; layers = <ALPHAS>; };
 
           /* Braces: [ and ] */
-          lpar { key-positions = <2 12>; bindings = <&kp BR_LBRC>; };
-          rpar { key-positions = <7 17>; bindings = <&kp BR_RBRC>; };
-
-          /* Slashes */
-          /* bsls { key-positions = <4 14>; bindings = <&kp BR_BSLS>; }; */
-          /* slsh { key-positions = <5 15>; bindings = <&kp BR_SLSH>; }; */
+          lpar { key-positions = <2 12>; bindings = <&kp BR_LBRC>; layers = <ALPHAS>; };
+          rpar { key-positions = <7 17>; bindings = <&kp BR_RBRC>; layers = <ALPHAS>; };
 
           /* Quotes */
-          single_quote { key-positions = <4 14>; bindings = <&kp BR_DQUO>; };
-          double_quote { key-positions = <5 15>; bindings = <&kp BR_QUOT>; };
+          single_quote { key-positions = <4 14>; bindings = <&kp BR_DQUO>; layers = <ALPHAS>; };
+          double_quote { key-positions = <5 15>; bindings = <&kp BR_QUOT>; layers = <ALPHAS>; };
 
           /* Convenience */
           esc { key-positions = <16 17>; bindings = <&kp ESC>; };
@@ -193,6 +197,26 @@
    &none       &none  &none  &none  &sys_reset         &sys_reset  &bt BT_NXT  &bt BT_PRV  &none  &none  
    &bt BT_CLR  &none  &none  &none  &bootloader        &bootloader &none       &none       &none  &none       
                       &none  &none  &none              &none       &none       &none
+                        >;
+                };
+
+                mouse_layer {
+                        display-name = "mouse";
+                        bindings = <
+   &none  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none       &none           &none            &mmv MOVE_UP    &none            &none         
+   &none  &none      &none      &none      &none       &none           &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &mmv MOVE_LEFT   &none  
+   &none  &none      &none      &none      &none       &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP    &msc SCRL_RIGHT  &none       
+                     &none      &none      &none       &none           &none            &none
+                        >;
+                };
+
+                none_layer {
+                        display-name = "none";
+                        bindings = <
+   &none  &none  &none  &none  &none       &none  &none  &none  &none  &none         
+   &none  &none  &none  &none  &none       &none  &none  &none  &none  &none  
+   &none  &none  &none  &none  &none       &none  &none  &none  &none  &none       
+                 &none  &none  &none       &none  &none  &none
                         >;
                 };
 
