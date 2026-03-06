@@ -12,10 +12,10 @@ layers:
   - UP
   - {t: END, s: END}
   - PG UP
-  - ''
-  - ''
-  - ''
-  - ''
+  - LALT
+  - LGUI
+  - LCTRL
+  - LSHIFT
   - ''
   - TAB
   - LEFT
@@ -55,10 +55,10 @@ layers:
   - F4
   - F5
   - F6
-  - F7
-  - F8
-  - F9
-  - F10
+  - LSHIFT
+  - LCTRL
+  - LGUI
+  - LALT
   - F11
   - F12
   - ''
@@ -86,16 +86,16 @@ layers:
   - ASTR
   - COLN
   - QUES
-  - TILD
-  - '='
-  - +
-  - ASTR
+  - {t: TILD, h: LALT}
+  - {t: '=', h: LGUI}
+  - {t: +, h: LCTRL}
+  - {t: ASTR, h: LSHIFT}
   - GRV
   - BSLS
-  - ''
-  - ''
-  - ''
-  - ''
+  - LSHIFT
+  - LCTRL
+  - LGUI
+  - LALT
   - ''
   - _
   - '-'
@@ -161,7 +161,7 @@ combos:
 - p: [34, 16]
   k: LSHIFT
 - p: [34, 17]
-  k: LGUI
+  k: LCTRL
 - p: [34, 18]
   k: LGUI
 - p: [34, 19]
@@ -169,7 +169,7 @@ combos:
 - p: [31, 13]
   k: LSHIFT
 - p: [31, 12]
-  k: LGUI
+  k: LCTRL
 - p: [31, 11]
   k: LGUI
 - p: [31, 10]
