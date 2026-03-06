@@ -100,6 +100,13 @@
                     layers = <SYMBOLS>;
           };
 
+          combo_mouse_layer_hold {
+                    timeout-ms = <50>;
+                    key-positions = <24 0>;
+                    bindings = <&mo MOUSE>;
+                    slow-release;
+          };
+
           // Portugueese accentuation combos
           combo_acute {
                     timeout-ms = <50>;
