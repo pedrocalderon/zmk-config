@@ -148,7 +148,11 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  zmk: ['', '', '', '', OUT TOG, '', '', '', '', '', '', '', '', '', '&sys_reset', '&sys_reset', BT NXT, BT PRV, '', '', BT CLR, '', '', '', '&bootloader', '&bootloader',
+    '', '', '', '', '', '', '', '', '', '']
 combos:
+- p: [0, 1, 2, 3, 6, 7, 8, 9]
+  k: {t: zmk, h: toggle}
 - p: [7, 8]
   k: ACUT
 - p: [6, 7]
@@ -173,7 +177,5 @@ combos:
   k: DQUO
 - p: [5, 15]
   k: QUOT
-- p: [0, 10]
-  k: ESC
-- p: [13, 23]
+- p: [16, 17]
   k: ESC
