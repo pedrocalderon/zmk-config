@@ -1,42 +1,6 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
-  alphas:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ;
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - {t: '-', h: LCTRL}
-  - {t: BSPC, h: LSHIFT}
-  - {t: ESC, h: edit}
-  - {t: RET, h: numbers}
-  - {t: SPACE, h: LGUI}
-  - {t: '#', h: LALT}
+  alphas: [Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, ;, Z, X, C, V, B, N, M, ',', ., /, '-', LSHIFT, edit, numbers, SPACE, '#']
   edit:
   - ''
   - ''
@@ -48,10 +12,10 @@ layers:
   - UP
   - {t: END, s: END}
   - PG UP
-  - LALT
-  - LSHFT
-  - LGUI
-  - LCTRL
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - TAB
   - LEFT
@@ -128,10 +92,10 @@ layers:
   - ASTR
   - GRV
   - BSLS
-  - LCTRL
-  - LGUI
-  - LSHFT
-  - LALT
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - _
   - '-'
@@ -167,9 +131,9 @@ layers:
   - ''
   - ''
   - ''
-  - '&mmv MOVE_RIGHT'
-  - '&mmv MOVE_DOWN'
   - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
   - ''
   - ''
   - ''
@@ -191,9 +155,25 @@ layers:
 combos:
 - p: [0, 1, 2, 3]
   k: {t: zmk, h: toggle}
-  l: [symbols]
+  l: [symbols, zmk]
 - p: [24, 0]
   k: mouse
+- p: [34, 16]
+  k: LSHIFT
+- p: [34, 17]
+  k: LGUI
+- p: [34, 18]
+  k: LGUI
+- p: [34, 19]
+  k: LGUI
+- p: [31, 13]
+  k: LSHIFT
+- p: [31, 12]
+  k: LGUI
+- p: [31, 11]
+  k: LGUI
+- p: [31, 10]
+  k: LGUI
 - p: [7, 8]
   k: ACUT
   l: [alphas]
