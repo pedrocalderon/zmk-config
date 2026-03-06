@@ -150,13 +150,50 @@ layers:
   - {t: ▽, type: trans}
   zmk: ['', '', '', '', OUT TOG, '', '', '', '', '', '', '', '', '', '&sys_reset', '&sys_reset', BT NXT, BT PRV, '', '', BT CLR, '', '', '', '&bootloader', '&bootloader',
     '', '', '', '', '', '', '', '', '', '']
-  mouse: ['', '&mkp LCLK', '&mkp MCLK', '&mkp RCLK', '', '', '', '&mmv MOVE_UP', '', '', '', '', '', '', '', '', '&mmv MOVE_RIGHT', '&mmv MOVE_DOWN', '&mmv MOVE_LEFT',
-    '', '', '', '', '', '', '&msc SCRL_LEFT', '&msc SCRL_DOWN', '&msc SCRL_UP', '&msc SCRL_RIGHT', '', '', '', '', '', '', '']
+  mouse:
+  - {type: held}
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - ''
+  - ''
+  - ''
+  - '&mmv MOVE_UP'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mmv MOVE_RIGHT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_LEFT'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   none: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 combos:
 - p: [0, 1, 2, 3]
   k: {t: zmk, h: toggle}
   l: [symbols]
+- p: [24, 0]
+  k: mouse
 - p: [7, 8]
   k: ACUT
   l: [alphas]
