@@ -89,7 +89,7 @@
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&kp c>, <&kp SEMI>;
+                bindings = <&kp C>, <&kp SEMI>;
             };
             tdsc: tap_dance_semi_column {
                 compatible = "zmk,behavior-tap-dance";
@@ -107,18 +107,6 @@
             10  11  12  13  14     15  16  17  18  19
             20  21  22  23  24     25  26  27  28  29
                     30  31  32     33  34  35          */
-          combo_tmux_prefix {
-                    timeout-ms = <50>;
-                    key-positions = <12 13>;
-                    bindings = <&kp LC(SPACE)>;
-          };
-
-          combo_enter {
-                    timeout-ms = <50>;
-                    key-positions = <16 17 18>;
-                    bindings = <&kp RET>;
-          };
-
           combo_zmk_layer_toggle {
                     timeout-ms = <50>;
                     key-positions = <0 1 2 3>;
@@ -216,24 +204,37 @@
           };
 
           /* Parenteses: ( and ) */
-          lbrc { key-positions = <3 13>; bindings = <&kp BR_LPRN>; layers = <ALPHAS>; };
-          rbrc { key-positions = <6 16>; bindings = <&kp BR_RPRN>; layers = <ALPHAS>; };
+          combo_lbrc { key-positions = <3 13>; bindings = <&kp BR_LPRN>; layers = <ALPHAS>; };
+          combo_rbrc { key-positions = <6 16>; bindings = <&kp BR_RPRN>; layers = <ALPHAS>; };
           
           /* Brackets: { and } */
-          lbkt { key-positions = <1 11>; bindings = <&kp BR_LCBR>; layers = <ALPHAS>; };
-          rbkt { key-positions = <8 18>; bindings = <&kp BR_RCBR>; layers = <ALPHAS>; };
+          combo_lbkt { key-positions = <1 11>; bindings = <&kp BR_LCBR>; layers = <ALPHAS>; };
+          combo_rbkt { key-positions = <8 18>; bindings = <&kp BR_RCBR>; layers = <ALPHAS>; };
 
           /* Braces: [ and ] */
-          lpar { key-positions = <2 12>; bindings = <&kp BR_LBRC>; layers = <ALPHAS>; };
-          rpar { key-positions = <7 17>; bindings = <&kp BR_RBRC>; layers = <ALPHAS>; };
+          combo_lpar { key-positions = <2 12>; bindings = <&kp BR_LBRC>; layers = <ALPHAS>; };
+          combo_rpar { key-positions = <7 17>; bindings = <&kp BR_RBRC>; layers = <ALPHAS>; };
 
           /* Quotes */
-          single_quote { key-positions = <4 14>; bindings = <&kp BR_DQUO>; layers = <ALPHAS>; };
-          double_quote { key-positions = <5 15>; bindings = <&kp BR_QUOT>; layers = <ALPHAS>; };
+          combo_single_quote { key-positions = <4 14>; bindings = <&kp BR_DQUO>; layers = <ALPHAS>; };
+          combo_double_quote { key-positions = <5 15>; bindings = <&kp BR_QUOT>; layers = <ALPHAS>; };
 
           /* Convenience */
-          esc { key-positions = <16 17>; bindings = <&kp ESC>; };
-          krepeat { key-positions = <26 27>; bindings = <&key_repeat>; };
+          combo_espace { key-positions = <16 17>; bindings = <&kp ESC>; };
+          combo_esc { key-positions = <15 16>; bindings = <&kp ESC>; };
+          combo_enter {
+                    timeout-ms = <50>;
+                    key-positions = <16 17 18>;
+                    bindings = <&kp RET>;
+          };
+          combo_krepeat { key-positions = <26 27>; bindings = <&key_repeat>; };
+
+          combo_tmux_prefix {
+                    timeout-ms = <50>;
+                    key-positions = <12 13>;
+                    bindings = <&kp LC(SPACE)>;
+          };
+
         };    
 
         keymap {
