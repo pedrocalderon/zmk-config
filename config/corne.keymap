@@ -85,12 +85,6 @@
                 bindings = <&kp PLUS>, <&kp LC(EQUAL)>;
                 mods = <(MOD_LCTL|MOD_RCTL)>;
             };
-            tdc: tap_dance_c {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp C>, <&kp SEMI>;
-            };
             tdsc: tap_dance_semi_column {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
@@ -219,6 +213,9 @@
           combo_single_quote { key-positions = <4 14>; bindings = <&kp BR_DQUO>; layers = <ALPHAS>; };
           combo_double_quote { key-positions = <5 15>; bindings = <&kp BR_QUOT>; layers = <ALPHAS>; };
 
+          /* ç */
+          combo_cedilla { key-positions = <21 22>; bindings = <&kp SEMI>; };
+
           /* Convenience */
           combo_espace { key-positions = <16 17>; bindings = <&kp SPACE>; };
           combo_esc { key-positions = <15 16>; bindings = <&kp ESC>; };
@@ -245,7 +242,7 @@
                         bindings = <
    &kp Q  &kp W  &kp E      &kp R    &kp T               &kp Y        &kp U      &kp I      &kp O   &kp P         
    &kp A  &kp S  &kp D      &kp F    &kp G               &kp H        &kp J      &kp K      &kp L   &tdsc  
-   &kp Z  &kp X  &tdc       &kp V    &kp B               &kp N        &kp M      &kp COMMA  &kp DOT &kp BR_SLSH       
+   &kp Z  &kp X  &kp C      &kp V    &kp B               &kp N        &kp M      &kp COMMA  &kp DOT &kp BR_SLSH       
                  &mo MOUSE  &kp RET  &mo EDIT            &mo NUMBERS  &kp SPACE  &mo FKEYS
                         >;
                 };
