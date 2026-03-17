@@ -85,6 +85,18 @@
                 bindings = <&kp PLUS>, <&kp LC(EQUAL)>;
                 mods = <(MOD_LCTL|MOD_RCTL)>;
             };
+            tdc: tap_dance_c {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp c>, <&kp SEMI>;
+            };
+            tdsc: tap_dance_semi_column {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp FSLH>, <&kp BR_COLN>;
+            };
         };
 
         combos {
@@ -231,8 +243,8 @@
                         display-name = "alphas";
                         bindings = <
    &kp Q  &kp W  &kp E      &kp R    &kp T               &kp Y        &kp U      &kp I      &kp O   &kp P         
-   &kp A  &kp S  &kp D      &kp F    &kp G               &kp H        &kp J      &kp K      &kp L   &kp SEMI  
-   &kp Z  &kp X  &kp C      &kp V    &kp B               &kp N        &kp M      &kp COMMA  &kp DOT &kp FSLH       
+   &kp A  &kp S  &kp D      &kp F    &kp G               &kp H        &kp J      &kp K      &kp L   &tdsc  
+   &kp Z  &kp X  &tdc       &kp V    &kp B               &kp N        &kp M      &kp COMMA  &kp DOT &kp BR_SLSH       
                  &mo MOUSE  &kp RET  &mo EDIT            &mo NUMBERS  &kp SPACE  &mo FKEYS
                         >;
                 };
@@ -240,30 +252,30 @@
                 edit_layer {
                         display-name = "edit";
                         bindings = <
-   &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &kp K_PLAY_PAUSE  &kp DEL              &kp C_PIP  &kp PRINTSCREEN  &kp PG_UP &kp INSERT  &kp C_BRIGHTNESS_INC
-   &kp LALT    &kp LGUI      &kp LCTRL     &kp LSHIFT        &bspc                &kp LEFT   &kp DOWN         &kp UP    &kp RIGHT   &kp C_BRIGHTNESS_DEC
-   &kp CAPS    &kp K_CUT     &kp K_COPY    &kp K_PASTE       &kp LC(BSPC)         &home      &kp LEFT         &kp DOWN  &kp RIGHT   &end
-                             &none         &none             &trans               &trans     &kp TAB          &kp PG_DN
+   &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP   &kp K_PLAY_PAUSE  &kp DEL              &kp C_PIP  &kp PRINTSCREEN  &kp PG_UP &kp INSERT  &kp C_BRIGHTNESS_INC
+   &kp LALT    &kp LGUI      &kp LCTRL      &kp LSHIFT        &bspc                &kp LEFT   &kp DOWN         &kp UP    &kp RIGHT   &kp C_BRIGHTNESS_DEC
+   &kp CAPS    &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE    &kp LC(BSPC)         &home      &kp LEFT         &kp DOWN  &kp RIGHT   &end
+                             &none          &none             &trans               &trans     &kp TAB          &kp PG_DN
                         >;
                 };
 
                 numbers_layer {
                         display-name = "numbers";
                         bindings = <
-   &kp EQUAL    &mt LG(N7) N7  &mt LG(N8) N8  &mt LG(N9) N9  &none        &none   &none       &none      &none     &none         
-   &kp MINUS    &mt LG(N4) N4  &mt LG(N5) N5  &mt LG(N6) N6  &none        &none   &kp LSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  
-   &kp BR_ASTR  &mt LG(N1) N1  &mt LG(N2) N2  &mt LG(N3) N3  &none        &none   &none       &kp COMMA  &kp DOT   &none       
-                               &none          &kp N0         &trans       &trans  &none       &none
+   &kp EQUAL    &mt LG(N7) N7  &mt LG(N8) N8  &mt LG(N9) N9  &none           &none   &none       &none      &none     &none         
+   &kp BR_MINS  &mt LG(N4) N4  &mt LG(N5) N5  &mt LG(N6) N6  &kp N0          &none   &kp LSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  
+   &kp BR_ASTR  &mt LG(N1) N1  &mt LG(N2) N2  &mt LG(N3) N3  &none           &none   &none       &kp COMMA  &kp DOT   &none       
+                               &none          &kp N0         &trans          &trans  &none       &none
                         >;
                 };
 
                 symbols_layer {
                         display-name = "symbols";
                         bindings = <
-   &none  &none        &none        &none        &none               &none         &none        &none        &none     &none         
-   &none  &kp BR_PIPE  &kp BR_BSLS  &kp BR_SLSH  &kp BR_COLN         &kp BR_QUES   &kp LSHIFT   &kp LCTRL    &kp LGUI  &kp LALT  
-   &none  &none        &none        &none        &none               &none         &none        &kp LT       &kp GT    &none       
-                       &trans       &trans       &trans              &trans        &trans       &trans
+   &kp BR_PLUS  &kp BR_AMPR  &kp BR_ASTR  &kp BR_PIPE  &none               &none   &none        &none        &none     &none         
+   &kp BR_UNDS  &kp BR_DLR   &kp BR_PERC  &kp BR_BSLS  &none               &none   &kp LSHIFT   &kp LCTRL    &kp LGUI  &kp LALT  
+   &none        &kp BR_EXLM  &kp BR_AT    &kp BR_HASH  &none               &none   &none        &kp LT       &kp GT    &kp BR_QUES       
+                             &trans       &trans       &trans              &trans  &trans       &trans
                         >;
                 };
 

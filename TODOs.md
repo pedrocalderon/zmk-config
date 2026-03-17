@@ -13,10 +13,3 @@ the home row mods, but with combos. If this works it can be the ultimate
 solution for my use case.
 
 ## Ideas
-
-## Faltando
-
-Repensar na layer de mouse, não da pra usar modificadores com click
-
-Seria melhor mover funcionalidades "meta" como volume e brilho para a layer dos
-FKEYS?
