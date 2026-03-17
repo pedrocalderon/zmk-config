@@ -294,7 +294,7 @@ combos:
   k: QUOT
   l: [alphas]
 - p: [16, 17]
-  k: ESC
+  k: SPACE
 - p: [15, 16]
   k: ESC
 - p: [16, 17, 18]
