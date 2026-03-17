@@ -220,7 +220,7 @@
           combo_double_quote { key-positions = <5 15>; bindings = <&kp BR_QUOT>; layers = <ALPHAS>; };
 
           /* Convenience */
-          combo_espace { key-positions = <16 17>; bindings = <&kp ESC>; };
+          combo_espace { key-positions = <16 17>; bindings = <&kp SPACE>; };
           combo_esc { key-positions = <15 16>; bindings = <&kp ESC>; };
           combo_enter {
                     timeout-ms = <50>;
