@@ -259,10 +259,10 @@
                 numbers_layer {
                         display-name = "numbers";
                         bindings = <
-   &kp EQUAL    &mt LG(N7) N7  &mt LG(N8) N8  &mt LG(N9) N9  &none           &none   &none       &none      &none     &none         
-   &kp BR_MINS  &mt LG(N4) N4  &mt LG(N5) N5  &mt LG(N6) N6  &kp N0          &none   &kp LSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  
-   &kp BR_ASTR  &mt LG(N1) N1  &mt LG(N2) N2  &mt LG(N3) N3  &none           &none   &none       &kp COMMA  &kp DOT   &none       
-                               &none          &kp N0         &trans          &trans  &none       &none
+   &kp EQUAL    &kp N7  &kp N8  &kp N9  &none           &none    &none       &none      &none     &none         
+   &kp BR_MINS  &kp N4  &kp N5  &kp N6  &kp N0          &kp N0   &kp LSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  
+   &kp BR_ASTR  &kp N1  &kp N2  &kp N3  &none           &none    &none       &kp COMMA  &kp DOT   &none       
+                        &none   &kp N0  &trans          &trans   &none       &none
                         >;
                 };
 
