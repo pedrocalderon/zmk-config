@@ -257,16 +257,16 @@ combos:
 - p: [32, 10]
   k: {t: LALT, h: sticky}
   l: [alphas]
-- p: [7, 8]
+- p: [27, 28]
   k: ACUT
   l: [alphas]
-- p: [6, 7]
+- p: [26, 27]
   k: GRV
   l: [alphas]
-- p: [6, 7, 8]
+- p: [26, 27, 28]
   k: TILD
   l: [alphas]
-- p: [6, 8]
+- p: [26, 28]
   k: CIRC
   l: [alphas]
 - p: [3, 13]
