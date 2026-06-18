@@ -174,25 +174,25 @@
           // Portugueese accentuation combos
           combo_acute {
                     timeout-ms = <50>;
-                    key-positions = <7 8>;
+                    key-positions = <27 28>;
                     bindings = <&kp BR_ACUT>;
                     layers = <ALPHAS>;
           };
           combo_grave {
                     timeout-ms = <50>;
-                    key-positions = <6 7>;
+                    key-positions = <26 27>;
                     bindings = <&kp BR_GRV>;
                     layers = <ALPHAS>;
           };
           combo_tilde {
                     timeout-ms = <50>;
-                    key-positions = <6 7 8>;
+                    key-positions = <26 27 28>;
                     bindings = <&kp BR_TILD>;
                     layers = <ALPHAS>;
           };
           combo_circ {
                     timeout-ms = <50>;
-                    key-positions = <6 8>;
+                    key-positions = <26 28>;
                     bindings = <&kp BR_CIRC>;
                     layers = <ALPHAS>;
           };
