@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
-  alphas: [Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, '&tdsc', Z, X, C, V, B, N, M, ',', ., SLSH, mouse, RET, edit, numbers, SPACE, fkeys]
+  alphas: [Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, '&tdsc', Z, X, C, V, B, N, M, ',', ., SLSH, mouse, '&key_repeat', edit, numbers, SPACE, fkeys]
   edit:
   - MUTE
   - VOL DN
@@ -43,7 +43,7 @@ layers:
   - '7'
   - '8'
   - '9'
-  - ''
+  - DEL
   - ''
   - ''
   - ''
@@ -53,7 +53,7 @@ layers:
   - '4'
   - '5'
   - '6'
-  - '0'
+  - {t: BSPC, s: DEL}
   - '0'
   - LSHIFT
   - LCTRL
@@ -63,7 +63,7 @@ layers:
   - '1'
   - '2'
   - '3'
-  - ''
+  - Ctl+BSPC
   - ''
   - ''
   - ','
@@ -299,7 +299,5 @@ combos:
   k: ESC
 - p: [16, 17, 18]
   k: RET
-- p: [26, 27]
-  k: '&key_repeat'
 - p: [12, 13]
   k: Ctl+SPACE
